@@ -21,15 +21,17 @@ function Sidebar() {
       <div className="relative h-[calc(100svh-74px)] bg-gray-200 dark:bg-gray-800">
         <div
           className={`fixed w-64 h-full bg-gray-200 dark:bg-gray-800 sm:static  sm:block transition-all duration-300 ${
-            isOpen ? "block" : "hidden"
-          }`}
+            isOpen ? "translate-x-0" : "translate-x-[-100%]"
+          } sm:translate-x-0`}
           // onBlur={closeSidebar}
         >
           {/* This is the background that is used to close the sidebar */}
-          {/* <div
-            className={`absolute z-[-10] w-screen h-screen bg-gray-900 bg-opacity-50 z-100 transition-all duration-300 ${isOpen ? "translate-x-64" : "translate-x-[-100%]"}`}
+          <div
+            className={`absolute z-[-10] w-screen h-screen sm:hidden bg-gray-900 bg-opacity-50 z-100 transition-all duration-300 ${
+              isOpen ? "translate-x-64" : "translate-x-[-100%]"
+            }`}
             onClick={closeSidebar}
-          /> */}
+          />
           <nav className="flex flex-col h-full bg-gray-200 dark:bg-gray-800 z-[100]">
             {/* <NavLink
             to="/"
@@ -88,8 +90,9 @@ function Sidebar() {
       {/* Sidebar Toggle Button */}
 
       <button
-        className={`absolute rounded-ee-md rounded-se-md bottom-4 transform py-2 px-1 bg-gray-200 dark:bg-gray-800 border-gray-400 sm:hidden active:bg-blue-500 active:text-white 
-        ${isOpen && "translate-x-64"}`}
+        className={`absolute rounded-ee-md rounded-se-md bottom-4 transform py-2 px-1 bg-gray-200 dark:bg-gray-800 border-gray-400 sm:hidden transition-all duration-300 ${
+          isOpen ? "translate-x-64" : "translate-x-0"
+        } sm:translate-x-0`}
         onClick={toggleSidebar}
       >
         {isOpen ? (
