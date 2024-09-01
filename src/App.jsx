@@ -12,7 +12,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   const location = useLocation();
-  const showSidebar = location.pathname !== "/";
+  const showSidebar = location.pathname !== "/" && location.pathname !== "/about";
 
   return (
     <ThemeProvider>

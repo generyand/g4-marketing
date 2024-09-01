@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutUs() {
   return (
-    <div>
+    <div className="p-4">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque commodi
       corrupti veritatis animi iste excepturi odit laborum ad similique
       quibusdam fugit, vitae dolor. Possimus omnis accusantium voluptatem
