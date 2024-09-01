@@ -20,15 +20,17 @@ function Sidebar() {
     <div>
       <div className="relative h-[calc(100svh-74px)] bg-gray-200 dark:bg-gray-800">
         <div
-          className={`fixed w-64 h-full bg-gray-200 dark:bg-gray-800 sm:static  sm:block transition-all duration-300 ${
+          className={`fixed w-64 h-full bg-gray-200 dark:bg-gray-800 sm:static  sm:block transition-transform duration-300 ${
             isOpen ? "translate-x-0" : "translate-x-[-100%]"
           } sm:translate-x-0`}
           // onBlur={closeSidebar}
         >
           {/* This is the background that is used to close the sidebar */}
           <div
-            className={`absolute z-[-10] w-screen h-screen sm:hidden bg-gray-900 bg-opacity-50 z-100 transition-all duration-300 ${
-              isOpen ? "translate-x-64" : "translate-x-[-100%]"
+            className={`absolute z-[-10] w-screen h-screen sm:hidden bg-gray-900 bg-opacity-50 z-100 transition-transform duration-300 ${
+              isOpen
+                ? "translate-x-64 opacity-100"
+                : "translate-x-[-100%] opacity-0"
             }`}
             onClick={closeSidebar}
           />
@@ -90,15 +92,15 @@ function Sidebar() {
       {/* Sidebar Toggle Button */}
 
       <button
-        className={`absolute rounded-ee-md rounded-se-md bottom-4 transform py-2 px-1 bg-gray-200 dark:bg-gray-800 border-gray-400 sm:hidden transition-all duration-300 ${
+        className={`absolute rounded-ee-md rounded-se-md bottom-4 transform py-2 px-1 bg-gray-200 dark:bg-gray-800 border-gray-400 sm:hidden transition-transform duration-300 ${
           isOpen ? "translate-x-64" : "translate-x-0"
         } sm:translate-x-0`}
         onClick={toggleSidebar}
       >
         {isOpen ? (
-          <FaAngleLeft className="text-xl" />
+          <FaAngleLeft className="text-xl text-blue-400" />
         ) : (
-          <FaAngleRight className="text-xl" />
+          <FaAngleRight className="text-xl text-blue-400" />
         )}
       </button>
     </div>
