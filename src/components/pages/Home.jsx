@@ -1,11 +1,16 @@
 import React from "react";
 import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import Animation from "../../assets/home/Animation-1.json";
 
 function Home() {
   return (
-    <div className="flex flex-col items-center justify-center gap-10 p-4 mx-auto mt-12 text-center sm:text-start sm:mt-28 sm:flex-row max-w-screen-2xl">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+    className="flex flex-col items-center justify-center gap-10 p-4 mx-auto mt-12 text-center sm:text-start sm:flex-row max-w-screen-2xl sm:mt-28">
       {/* Title */}
       <div className="flex-1">
         <div className="mb-4 title-text">
@@ -22,7 +27,7 @@ function Home() {
         </p>
 
         <button className="px-4 py-2 text-white transition-all duration-200 bg-blue-500 border-2 border-blue-500 rounded-md hover:bg-transparent hover:text-blue-500 sm:text-2xl">
-          Explore Topics
+          <Link to="/key-terminologies">Explore Topics</Link>
         </button>
       </div>
 
@@ -30,7 +35,7 @@ function Home() {
       <div className="flex-1 max-w-[640px]">
         <Lottie animationData={Animation} />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
