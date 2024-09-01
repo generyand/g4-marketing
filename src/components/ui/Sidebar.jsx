@@ -97,11 +97,11 @@ function Sidebar() {
         } sm:translate-x-0`}
         onClick={toggleSidebar}
       >
-        {isOpen ? (
-          <FaAngleLeft className="text-xl text-blue-400" />
-        ) : (
-          <FaAngleRight className="text-xl text-blue-400" />
-        )}
+        <FaAngleRight
+          className={`text-xl text-blue-400 transition-transform duration-300 ${
+            isOpen && "rotate-180"
+          }`}
+        />
       </button>
     </div>
   );
