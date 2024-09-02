@@ -14,7 +14,7 @@ function Header() {
         {/* Logo */}
         <Link to={"/"} className="flex-shrink-0">
           <h1 className="text-2xl font-semibold dark:text-white">
-            GROUP<span className="text-blue-500">4</span>
+            GRP<span className="text-blue-500">4</span>
           </h1>
         </Link>
 
