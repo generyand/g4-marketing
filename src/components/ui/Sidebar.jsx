@@ -96,6 +96,7 @@ function Sidebar() {
           isOpen ? "translate-x-64" : "translate-x-0"
         } sm:translate-x-0`}
         onClick={toggleSidebar}
+        
       >
         <FaAngleRight
           className={`text-xl text-blue-400 transition-transform duration-300 ${
