@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaMoon, FaSun, FaBars } from "react-icons/fa";
+import { FaMoon, FaSun, FaBars, FaSearch } from "react-icons/fa";
 import { useTheme } from "../../context/ThemeContext";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,14 +8,25 @@ import SearchBar from "./SearchBar";
 function Header() {
   const { isDarkMode, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+
+  const handleSearchToggle = () => {
+    setIsSearchVisible(!isSearchVisible);
+    setIsMenuOpen(false);
+  };
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+    setIsSearchVisible(false);
+  };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md bg-opacity-5 dark:bg-gray-800 backdrop-blur-md">
+    <header className="sticky top-0 z-40 w-full bg-white shadow-md bg-opacity-5 dark:bg-gray-800 backdrop-blur-md">
       <div className="flex items-center justify-between p-4 mx-auto wrapper max-w-screen-2xl">
         {/* Logo */}
         <Link to={"/"} className="flex-shrink-0">
           <h1 className="text-2xl font-semibold dark:text-white">
-            GRP<span className="text-blue-500">4</span>
+            GROUP<span className="text-blue-500">4</span>
           </h1>
         </Link>
 
@@ -74,14 +85,44 @@ function Header() {
           </button>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="p-2 rounded-full sm:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
-        >
-          <FaBars className="text-gray-700 dark:text-gray-300" />
-        </button>
+        {/* Mobile Buttons */}
+        <div className="flex items-center sm:hidden">
+          <button
+            onClick={handleSearchToggle}
+            className="p-2 mr-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            <FaSearch className="text-gray-700 dark:text-gray-300" />
+          </button>
+          <button
+            onClick={handleMenuToggle}
+            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            <FaBars className="text-gray-700 dark:text-gray-300" />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Search Bar */}
+      <AnimatePresence>
+        {isSearchVisible && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="sm:hidden"
+          >
+            <motion.div
+              initial={{ y: -20 }}
+              animate={{ y: 0 }}
+              exit={{ y: -20 }}
+              className="p-4"
+            >
+              <SearchBar />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Mobile Menu */}
       <AnimatePresence>

@@ -57,7 +57,7 @@ function SearchBar() {
         <FaSearch className="absolute text-gray-400 transform -translate-y-1/2 right-3 top-1/2" />
       </div>
       {isOpen && results.length > 0 && (
-        <ul className="absolute z-10 w-full mt-1 bg-white border rounded-md shadow-lg dark:bg-gray-800 dark:border-gray-700">
+        <ul className="absolute z-50 w-full mt-1 overflow-y-auto bg-white border rounded-md shadow-lg max-h-60 dark:bg-gray-800 dark:border-gray-700">
           {results.map((result, index) => (
             <li
               key={index}

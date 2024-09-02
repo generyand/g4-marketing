@@ -44,7 +44,7 @@ function Sidebar() {
               >
                 Key Terminologies
                 <FaAngleDown
-                  className={`transition-transform duration-300 ${
+                  className={`transition-transform duration-300 mx-3 ${
                     keyTerminologiesOpen ? "rotate-180" : ""
                   }`}
                 />
@@ -56,7 +56,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                     end
                   >
@@ -67,7 +67,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                   >
                     Basic Terms
@@ -82,7 +82,7 @@ function Sidebar() {
               >
                 The 7P's of Marketing
                 <FaAngleDown
-                  className={`transition-transform duration-300 ${
+                  className={`transition-transform duration-300 mx-3 ${
                     sevenPsOpen ? "rotate-180" : ""
                   }`}
                 />
@@ -94,7 +94,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                     end
                   >
@@ -105,7 +105,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                   >
                     Product
@@ -115,7 +115,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                   >
                     Price
@@ -130,7 +130,7 @@ function Sidebar() {
               >
                 Branding
                 <FaAngleDown
-                  className={`transition-transform duration-300 ${
+                  className={`transition-transform duration-300 mx-3 ${
                     brandingOpen ? "rotate-180" : ""
                   }`}
                 />
@@ -142,7 +142,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                     end
                   >
@@ -153,7 +153,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                   >
                     Brand Identity
@@ -168,7 +168,7 @@ function Sidebar() {
               >
                 Marketing Research
                 <FaAngleDown
-                  className={`transition-transform duration-300 ${
+                  className={`transition-transform duration-300 mx-3 ${
                     marketingResearchOpen ? "rotate-180" : ""
                   }`}
                 />
@@ -180,7 +180,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                     end
                   >
@@ -191,7 +191,7 @@ function Sidebar() {
                     className={({ isActive }) =>
                       isActive
                         ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block"
-                        : "text-base font-medium px-2 py-2 block"
+                        : "text-base font-light px-2 py-2 block text-gray-300"
                     }
                   >
                     Market Analysis
@@ -205,7 +205,7 @@ function Sidebar() {
 
       {/* Sidebar Toggle Button */}
       <button
-        className={`absolute rounded-ee-md rounded-se-md bottom-4 transform py-2 px-1 bg-gray-200 dark:bg-gray-800 border-gray-400 sm:hidden transition-transform duration-300 ${
+        className={`absolute rounded-ee-md rounded-se-md bottom-4 transform py-2 px-1 bg-gray-200 dark:bg-gray-800 sm:hidden transition-transform duration-300 ${
           isOpen ? "translate-x-64" : "translate-x-0"
         } sm:translate-x-0`}
         onClick={toggleSidebar}
