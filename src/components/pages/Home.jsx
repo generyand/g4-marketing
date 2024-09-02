@@ -7,10 +7,11 @@ import Animation from "../../assets/home/Animation-1.json";
 
 function Home() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-    className="flex flex-col items-center justify-center gap-10 p-4 mx-auto mt-12 text-center sm:text-start sm:flex-row max-w-screen-2xl sm:mt-28">
+      className="flex flex-col items-center justify-center gap-10 p-4 mx-auto mt-12 mb-12 text-center sm:text-start sm:flex-row max-w-screen-2xl sm:mt-28"
+    >
       {/* Title */}
       <div className="flex-1">
         <div className="mb-4 title-text">

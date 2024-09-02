@@ -9,7 +9,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md dark:bg-gray-800">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-md bg-opacity-5 dark:bg-gray-800 backdrop-blur-md">
       <div className="flex items-center justify-between p-4 mx-auto wrapper max-w-screen-2xl">
         {/* Logo */}
         <Link to={"/"} className="flex-shrink-0">
@@ -54,11 +54,29 @@ function Header() {
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
           >
-            {isDarkMode ? (
-              <FaMoon className="text-gray-500" />
-            ) : (
-              <FaSun className="text-yellow-500" />
-            )}
+            <AnimatePresence mode="wait">
+              {isDarkMode ? (
+                <motion.div
+                  key="moon"
+                  initial={{ opacity: 0, rotate: -180 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: 180 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaMoon className="text-gray-500" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="sun"
+                  initial={{ opacity: 0, rotate: -180 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: 180 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaSun className="text-yellow-500" />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </button>
         </nav>
 
@@ -100,17 +118,31 @@ function Header() {
               </li>
               <button
                 onClick={toggleTheme}
-                className="flex items-center w-full p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+                className="flex items-center justify-center w-full gap-2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
               >
-                {isDarkMode ? (
-                  <>
-                    <FaMoon className="mr-2 text-gray-500" />
-                  </>
-                ) : (
-                  <>
-                    <FaSun className="mr-2 text-yellow-500" />
-                  </>
-                )}
+                <AnimatePresence mode="wait">
+                  {isDarkMode ? (
+                    <motion.div
+                      key="moon"
+                      initial={{ opacity: 0, rotate: -180 }}
+                      animate={{ opacity: 1, rotate: 0 }}
+                      exit={{ opacity: 0, rotate: 180 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <FaMoon className="text-gray-500" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="sun"
+                      initial={{ opacity: 0, rotate: -180 }}
+                      animate={{ opacity: 1, rotate: 0 }}
+                      exit={{ opacity: 0, rotate: 180 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <FaSun className="text-yellow-500" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 Switch Theme
               </button>
             </ul>
