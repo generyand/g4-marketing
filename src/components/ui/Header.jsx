@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { FaSearch, FaMoon, FaSun, FaBars } from "react-icons/fa";
+import { FaMoon, FaSun, FaBars } from "react-icons/fa";
 import { useTheme } from "../../context/ThemeContext";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import SearchBar from "./SearchBar";
 
 function Header() {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -20,14 +21,7 @@ function Header() {
 
         {/* Search Bar */}
         <div className="flex-grow hidden max-w-md mx-4 sm:block">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:text-white dark:border-gray-600"
-            />
-            <FaSearch className="absolute text-gray-400 transform -translate-y-1/2 right-3 top-1/2" />
-          </div>
+          <SearchBar />
         </div>
 
         {/* Navigation */}
