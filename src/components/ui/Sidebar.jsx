@@ -53,7 +53,7 @@ function Sidebar() {
       <motion.button
         className="absolute px-1 py-2 bg-gray-200 rounded-ee-md rounded-se-md bottom-4 dark:bg-gray-800 sm:hidden"
         initial={{ x: 0 }}
-        animate={{ x: isOpen ? 256 : 0 }}
+        animate={{ x: isOpen ? 286 : 0 }}
         transition={{ duration: 0.3 }}
         onClick={toggleSidebar}
       >
