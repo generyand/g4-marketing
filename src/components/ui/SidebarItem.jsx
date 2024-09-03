@@ -7,7 +7,7 @@ const SidebarItem = ({ title, items, isOpen, toggleOpen }) => (
   <div className="overflow-hidden">
     <button
       onClick={toggleOpen}
-      className="flex items-center justify-between w-full px-2 py-3 text-lg font-medium"
+      className="flex items-center justify-between w-full p-3 text-lg font-medium"
     >
       {title}
       <motion.div
@@ -31,8 +31,8 @@ const SidebarItem = ({ title, items, isOpen, toggleOpen }) => (
               to={item.path}
               className={({ isActive }) =>
                 isActive
-                  ? "bg-blue-500 text-base font-medium text-white px-2 py-2 block pl-6"
-                  : "text-base font-light px-2 py-2 block dark:text-gray-300 text-gray-600 pl-6"
+                  ? "bg-blue-500 text-base font-medium text-white px-3 py-2 block pl-6"
+                  : "text-base font-light px-3 py-2 block dark:text-gray-300 text-gray-600 pl-6"
               }
               end={item.end}
             >

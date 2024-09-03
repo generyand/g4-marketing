@@ -22,7 +22,7 @@ function Sidebar() {
     <div>
       <div className="relative h-[calc(100svh-74px)] bg-gray-200 dark:bg-gray-800">
         <motion.div
-          className="fixed w-64 h-full bg-gray-200 dark:bg-gray-800 sm:static sm:block"
+          className="fixed w-[18rem] h-full bg-gray-200 dark:bg-gray-800 sm:static sm:block"
           initial={{ x: "-100%" }}
           animate={{ x: isOpen || window.innerWidth >= 640 ? 0 : "-100%" }}
           transition={{ duration: 0.3 }}
