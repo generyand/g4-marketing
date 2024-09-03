@@ -7,7 +7,7 @@ function ThemeToggle({ isMobile = false }) {
   const { isDarkMode, toggleTheme } = useTheme();
 
   const buttonClass = isMobile
-    ? "flex items-center justify-center w-full gap-2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+    ? "flex items-center justify-center w-full gap-2 px-2 rounded-full py-1 hover:bg-gray-200 dark:hover:bg-gray-700"
     : "p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700";
 
   return (

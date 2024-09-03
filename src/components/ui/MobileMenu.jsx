@@ -12,13 +12,13 @@ function MobileMenu({ isOpen, toggleTheme, isDarkMode }) {
           animate={{ height: "auto" }}
           transition={{ duration: 0.25 }}
           exit={{ height: 0 }}
-          className="flex flex-col items-center justify-center overflow-hidden text-center sm:hidden"
+          className="flex overflow-hidden flex-col justify-center items-center text-center sm:hidden"
         >
-          <ul className="px-4 py-2 space-y-2">
+          <ul className="flex flex-col px-4 py-2">
             <li>
               <Link
                 to="/"
-                className="block text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                className="block px-2 py-1 text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
               >
                 Home
               </Link>
@@ -26,7 +26,7 @@ function MobileMenu({ isOpen, toggleTheme, isDarkMode }) {
             <li>
               <Link
                 to="/about"
-                className="block text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                className="block px-2 py-1 text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
               >
                 About Us
               </Link>
