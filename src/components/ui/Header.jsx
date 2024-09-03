@@ -26,7 +26,7 @@ function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white bg-opacity-5 shadow-md backdrop-blur-md dark:bg-gray-800">
+    <header className="sticky top-0 z-40 w-full bg-white bg-opacity-70 shadow-md backdrop-blur-md dark:bg-opacity-70 dark:bg-gray-800">
       <div className="flex justify-between items-center p-4 mx-auto max-w-screen-2xl wrapper">
         <Logo />
         <div className="hidden flex-grow mx-4 max-w-md sm:block">
@@ -39,7 +39,11 @@ function Header() {
         />
       </div>
       <MobileSearchBar isVisible={isSearchVisible} />
-      <MobileMenu isOpen={isMenuOpen} toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+      <MobileMenu
+        isOpen={isMenuOpen}
+        toggleTheme={toggleTheme}
+        isDarkMode={isDarkMode}
+      />
     </header>
   );
 }
