@@ -1,22 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaAngleRight } from "react-icons/fa";
-import { AnimatePresence, delay, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import SidebarItem from "./SidebarItem";
 import { navigationConfig } from "../../data/navigationConfig";
+import { useLocation } from "react-router-dom";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openItem, setOpenItem] = useState(null);
+  const location = useLocation();
 
-  const toggleSidebar = () => setIsOpen(!isOpen);
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+    // If sidebar is being opened, make sure the current section is open
+    if (!isOpen) {
+      const currentSection = navigationConfig.find(section =>
+        section.items.some(item => item.path === location.pathname)
+      );
+      if (currentSection) {
+        setOpenItem(currentSection.key);
+      }
+    }
+  };
 
   const closeSidebar = () => {
-    if (isOpen) setIsOpen(false);
+    setIsOpen(false);
   };
 
   const toggleOpenState = (key) => {
-    setOpenItem(openItem === key ? null : key);
+    setOpenItem(prevOpenItem => prevOpenItem === key ? null : key);
   };
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const openSection = navigationConfig.find(section =>
+      section.items.some(item => item.path === currentPath)
+    );
+    if (openSection) {
+      setOpenItem(openSection.key);
+    }
+  }, [location.pathname]);
 
   return (
     <div>
@@ -49,6 +72,7 @@ function Sidebar() {
                 items={item.items}
                 isOpen={openItem === item.key}
                 toggleOpen={() => toggleOpenState(item.key)}
+                closeSidebar={closeSidebar}
               />
             ))}
           </nav>

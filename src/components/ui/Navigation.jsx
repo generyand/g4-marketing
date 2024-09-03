@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 
 function Navigation() {
   return (
-    <nav className="items-center hidden sm:flex">
+    <nav className="hidden items-center sm:flex">
       <ul className="flex mr-4 space-x-4">
         <li>
           <Link
