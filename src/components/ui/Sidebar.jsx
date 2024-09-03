@@ -14,8 +14,8 @@ function Sidebar() {
     setIsOpen(!isOpen);
     // If sidebar is being opened, make sure the current section is open
     if (!isOpen) {
-      const currentSection = navigationConfig.find(section =>
-        section.items.some(item => item.path === location.pathname)
+      const currentSection = navigationConfig.find((section) =>
+        section.items.some((item) => item.path === location.pathname)
       );
       if (currentSection) {
         setOpenItem(currentSection.key);
@@ -28,13 +28,13 @@ function Sidebar() {
   };
 
   const toggleOpenState = (key) => {
-    setOpenItem(prevOpenItem => prevOpenItem === key ? null : key);
+    setOpenItem((prevOpenItem) => (prevOpenItem === key ? null : key));
   };
 
   useEffect(() => {
     const currentPath = location.pathname;
-    const openSection = navigationConfig.find(section =>
-      section.items.some(item => item.path === currentPath)
+    const openSection = navigationConfig.find((section) =>
+      section.items.some((item) => item.path === currentPath)
     );
     if (openSection) {
       setOpenItem(openSection.key);
