@@ -19,7 +19,7 @@ const NextPrevButtons = ({ routes }) => {
       <button
         onClick={() => handleNavigation(-1)}
         disabled={currentIndex === 0}
-        className="p-3 text-blue-400 rounded-full sm:text-white sm:bg-blue-500 sm:px-4 sm:py-2 sm:rounded sm:disabled:bg-gray-300 disabled:text-gray-500"
+        className="p-3 text-blue-400 transition-all duration-300 rounded-full sm:text-white sm:bg-blue-500 sm:px-4 sm:py-2 sm:rounded sm:disabled:bg-gray-300 disabled:text-gray-500 active:bg-blue-500 active:text-white"
       >
         <p className="hidden sm:block">Previous</p>
         <FaChevronLeft
@@ -30,7 +30,7 @@ const NextPrevButtons = ({ routes }) => {
       <button
         onClick={() => handleNavigation(1)}
         disabled={currentIndex === routes.length - 1}
-        className="p-3 text-blue-400 rounded-full sm:text-white sm:bg-blue-500 sm:px-4 sm:py-2 sm:rounded sm:disabled:bg-gray-300 disabled:text-gray-500"
+        className="p-3 text-blue-400 transition-all duration-300 rounded-full sm:text-white sm:bg-blue-500 sm:px-4 sm:py-2 sm:rounded sm:disabled:bg-gray-300 disabled:text-gray-500 active:bg-blue-500 active:text-white"
       >
         <p className="hidden sm:block">Next</p>
         <FaChevronRight
