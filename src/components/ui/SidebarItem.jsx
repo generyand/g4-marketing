@@ -19,7 +19,8 @@ const SidebarItem = ({ title, items, isOpen, toggleOpen, closeSidebar }) => {
       <button
         onClick={toggleOpen}
         className={`flex justify-between items-center p-3 w-full text-lg font-medium ${
-          isActive ? "text-blue-400 dark:bg-gray-800" : ""}`}
+          isActive ? "text-blue-400 dark:bg-gray-800" : ""
+        }`}
       >
         {title}
         <motion.div
@@ -43,8 +44,8 @@ const SidebarItem = ({ title, items, isOpen, toggleOpen, closeSidebar }) => {
                 to={item.path}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-blue-400 text-base font-medium px-3 py-2 block pl-6"
-                    : "text-base font-light px-3 py-2 block dark:text-gray-300 text-gray-600 pl-6"
+                    ? "text-blue-400 text-base font-medium px-3 py-2 block pl-6 transition-color"
+                    : "text-base font-light px-3 py-2 block dark:text-gray-300 text-gray-600 pl-6 transition-color"
                 }
                 end={item.end}
                 onClick={() => handleItemClick(item.path)}
