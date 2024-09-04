@@ -70,7 +70,7 @@ function App() {
           <Header />
           <main className="flex">
             {showSidebar && <Sidebar />}
-            <div className="flex-grow">
+            <div className="flex-grow pb-16 sm:pb-0"> {/* Added padding-bottom for mobile */} {/* ... your existing routes ... */}
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<AboutUs />} />

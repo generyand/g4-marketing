@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaAngleRight } from "react-icons/fa";
+import { LuPanelLeftOpen } from "react-icons/lu";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarItem from "./SidebarItem";
 import { navigationConfig } from "../../data/navigationConfig";
@@ -81,7 +81,7 @@ function Sidebar() {
 
       {/* Sidebar Toggle Button */}
       <motion.button
-        className="absolute bottom-4 px-1 py-2 bg-gray-200 rounded-ee-md rounded-se-md dark:bg-gray-800 sm:hidden"
+        className="absolute px-1 py-2 bg-gray-200 bottom-4 rounded-ee-md rounded-se-md dark:bg-gray-800 sm:hidden"
         initial={{ x: 0 }}
         animate={{ x: isOpen ? 286 : 0 }}
         transition={{ duration: 0.3 }}
@@ -91,7 +91,7 @@ function Sidebar() {
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <FaAngleRight className="text-xl text-blue-400" />
+          <LuPanelLeftOpen className="text-xl text-blue-400" />
         </motion.div>
       </motion.button>
     </div>
