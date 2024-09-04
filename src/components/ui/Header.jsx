@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { FaMoon, FaSun, FaBars, FaSearch } from "react-icons/fa";
+import { FaBars, FaSearch } from "react-icons/fa";
 import { useTheme } from "../../context/ThemeContext";
-import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
 import SearchBar from "./SearchBar";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import MobileMenu from "./MobileMenu";
-import ThemeToggle from "./ThemeToggle";
 import MobileSearchBar from "./MobileSearchBar";
 
 function Header() {
@@ -26,10 +23,10 @@ function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white bg-opacity-70 shadow-md backdrop-blur-md dark:bg-opacity-70 dark:bg-gray-800">
-      <div className="flex justify-between items-center p-4 mx-auto max-w-screen-2xl wrapper">
+    <header className="sticky top-0 z-40 w-full bg-white shadow-md bg-opacity-70 backdrop-blur-md dark:bg-opacity-70 dark:bg-gray-800">
+      <div className="flex items-center justify-between p-4 mx-auto max-w-screen-2xl wrapper">
         <Logo />
-        <div className="hidden flex-grow mx-4 max-w-md sm:block">
+        <div className="flex-grow hidden max-w-md mx-4 sm:block">
           <SearchBar />
         </div>
         <Navigation />

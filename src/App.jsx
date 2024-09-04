@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/ui/Header";
 import Sidebar from "./components/ui/Sidebar";
+import NextPrevButtons from "./components/ui/NextPrevButtons";
 import Home from "./components/pages/Home";
 import AboutUs from "./components/pages/AboutUs";
 import KeyTerminologies from "./components/pages/KeyTerminologies";
@@ -31,7 +32,36 @@ import MarketAnalysis from "./components/pages/MarketingResearch/MarketAnalysis"
 
 function App() {
   const location = useLocation();
-  const showSidebar = location.pathname !== "/" && location.pathname !== "/about";
+  const showSidebar =
+    location.pathname !== "/" && location.pathname !== "/about";
+
+  const routes = [
+    "/key-terminologies",
+    "/key-terminologies/marketing-strategy-business-plan",
+    "/key-terminologies/competitor-analysis",
+    "/key-terminologies/company-overview",
+    "/key-terminologies/product-service-plan",
+    "/key-terminologies/marketing-plan",
+    "/7ps-of-marketing",
+    "/7ps-of-marketing/product",
+    "/7ps-of-marketing/pricing",
+    "/7ps-of-marketing/place",
+    "/7ps-of-marketing/promotion",
+    "/7ps-of-marketing/people",
+    "/7ps-of-marketing/process",
+    "/7ps-of-marketing/physical-evidence",
+    "/branding",
+    "/branding/history",
+    "/branding/definition",
+    "/branding/characteristics",
+    "/marketing-research",
+    "/marketing-research/reasons-to-conduct",
+    "/marketing-research/guide-to-conduct",
+    "/marketing-research/need-and-importance",
+    "/marketing-research/market-analysis",
+  ];
+
+  const showNextPrevButtons = !["/", "/about"].includes(location.pathname);
 
   return (
     <ThemeProvider>
@@ -40,33 +70,83 @@ function App() {
           <Header />
           <main className="flex">
             {showSidebar && <Sidebar />}
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/key-terminologies" element={<KeyTerminologies />} />
-              <Route path="/key-terminologies/marketing-strategy-business-plan" element={<MarketingStrategyBusinessPlan />} />
-              <Route path="/key-terminologies/competitor-analysis" element={<CompetitorAnalysis />} />
-              <Route path="/key-terminologies/company-overview" element={<CompanyOverview />} />
-              <Route path="/key-terminologies/product-service-plan" element={<ProductServicePlan />} />
-              <Route path="/key-terminologies/marketing-plan" element={<MarketingPlan />} />
-              <Route path="/7ps-of-marketing" element={<SevenPs />} />
-              <Route path="/7ps-of-marketing/product" element={<Product />} />
-              <Route path="/7ps-of-marketing/pricing" element={<Pricing />} />
-              <Route path="/7ps-of-marketing/place" element={<Place />} />
-              <Route path="/7ps-of-marketing/promotion" element={<Promotion />} />
-              <Route path="/7ps-of-marketing/people" element={<People />} />
-              <Route path="/7ps-of-marketing/process" element={<Process />} />
-              <Route path="/7ps-of-marketing/physical-evidence" element={<PhysicalEvidence />} />
-              <Route path="/branding" element={<Branding />} />
-              <Route path="/branding/history" element={<HistoryOfBranding />} />
-              <Route path="/branding/definition" element={<Definition />} />
-              <Route path="/branding/characteristics" element={<CharacteristicsOfGoodBrand />} />
-              <Route path="/marketing-research" element={<MarketingResearch />} />
-              <Route path="/marketing-research/reasons-to-conduct" element={<ReasonsToConductResearch />} />
-              <Route path="/marketing-research/guide-to-conduct" element={<GuideToConduct />} />
-              <Route path="/marketing-research/need-and-importance" element={<NeedAndImportance />} />
-              <Route path="/marketing-research/market-analysis" element={<MarketAnalysis />} />
-            </Routes>
+            <div className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<AboutUs />} />
+                <Route
+                  path="/key-terminologies"
+                  element={<KeyTerminologies />}
+                />
+                <Route
+                  path="/key-terminologies/marketing-strategy-business-plan"
+                  element={<MarketingStrategyBusinessPlan />}
+                />
+                <Route
+                  path="/key-terminologies/competitor-analysis"
+                  element={<CompetitorAnalysis />}
+                />
+                <Route
+                  path="/key-terminologies/company-overview"
+                  element={<CompanyOverview />}
+                />
+                <Route
+                  path="/key-terminologies/product-service-plan"
+                  element={<ProductServicePlan />}
+                />
+                <Route
+                  path="/key-terminologies/marketing-plan"
+                  element={<MarketingPlan />}
+                />
+                <Route path="/7ps-of-marketing" element={<SevenPs />} />
+                <Route path="/7ps-of-marketing/product" element={<Product />} />
+                <Route path="/7ps-of-marketing/pricing" element={<Pricing />} />
+                <Route path="/7ps-of-marketing/place" element={<Place />} />
+                <Route
+                  path="/7ps-of-marketing/promotion"
+                  element={<Promotion />}
+                />
+                <Route path="/7ps-of-marketing/people" element={<People />} />
+                <Route path="/7ps-of-marketing/process" element={<Process />} />
+                <Route
+                  path="/7ps-of-marketing/physical-evidence"
+                  element={<PhysicalEvidence />}
+                />
+                <Route path="/branding" element={<Branding />} />
+                <Route
+                  path="/branding/history"
+                  element={<HistoryOfBranding />}
+                />
+                <Route path="/branding/definition" element={<Definition />} />
+                <Route
+                  path="/branding/characteristics"
+                  element={<CharacteristicsOfGoodBrand />}
+                />
+                <Route
+                  path="/marketing-research"
+                  element={<MarketingResearch />}
+                />
+                <Route
+                  path="/marketing-research/reasons-to-conduct"
+                  element={<ReasonsToConductResearch />}
+                />
+                <Route
+                  path="/marketing-research/guide-to-conduct"
+                  element={<GuideToConduct />}
+                />
+                <Route
+                  path="/marketing-research/need-and-importance"
+                  element={<NeedAndImportance />}
+                />
+                <Route
+                  path="/marketing-research/market-analysis"
+                  element={<MarketAnalysis />}
+                />
+              </Routes>
+
+              {/* Next and Previous Buttons */}
+              {showNextPrevButtons && <NextPrevButtons routes={routes} />}
+            </div>
           </main>
         </div>
       </div>
