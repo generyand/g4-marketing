@@ -12,7 +12,7 @@ const MarketingStrategyBusinessPlan = () => {
         attract and retain those skills.
       </p>
       <p className="mb-2 font-bold">An Example of a Marketing Strategy:</p>
-      <div className="flex flex-col items-center p-4 rounded-lg sm:items-start bg-violet-200 sm:flex-row">
+      <div className="flex flex-col items-center p-4 rounded-lg sm:items-start bg-violet-200 dark:bg-violet-400 sm:flex-row">
         <img
           src={LivePlanLogo}
           alt="LivePlan Logo"
