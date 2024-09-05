@@ -57,7 +57,6 @@ function App() {
     "/marketing-research/reasons-to-conduct",
     "/marketing-research/guide-to-conduct",
     "/marketing-research/need-and-importance",
-    "/marketing-research/market-analysis",
   ];
 
   const showNextPrevButtons = !["/", "/about"].includes(location.pathname);

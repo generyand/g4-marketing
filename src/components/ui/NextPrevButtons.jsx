@@ -15,7 +15,7 @@ const NextPrevButtons = ({ routes }) => {
   };
 
   return (
-    <div className="flex gap-12 justify-center items-center px-4 sm:gap-14 md:gap-16 sm:static">
+    <div className="flex items-center justify-center gap-12 px-4 sm:gap-14 md:gap-16 sm:static">
       <button
         onClick={() => handleNavigation(-1)}
         disabled={currentIndex === 0}
