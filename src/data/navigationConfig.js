@@ -70,7 +70,7 @@ export const navigationConfig = [
         title: "Need and Importance",
         path: "/marketing-research/need-and-importance",
       },
-      { title: "Market Analysis", path: "/marketing-research/market-analysis" },
+      // { title: "Market Analysis", path: "/marketing-research/market-analysis" },
     ],
   },
 ];

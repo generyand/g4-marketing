@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/ui/Header";
 import Sidebar from "./components/ui/Sidebar";
 import NextPrevButtons from "./components/ui/NextPrevButtons";
@@ -28,7 +28,6 @@ import MarketingResearch from "./components/pages/MarketingResearch";
 import ReasonsToConductResearch from "./components/pages/MarketingResearch/ReasonsToConductResearch";
 import GuideToConduct from "./components/pages/MarketingResearch/GuideToConduct";
 import NeedAndImportance from "./components/pages/MarketingResearch/NeedAndImportance";
-import MarketAnalysis from "./components/pages/MarketingResearch/MarketAnalysis";
 
 function App() {
   const location = useLocation();
@@ -67,11 +66,12 @@ function App() {
     <ThemeProvider>
       <div className="flex flex-col min-h-screen font-sans bg-gray-100 dark:bg-gray-900 dark:text-white text-neutral-800">
         <Header />
-        <div className="flex relative flex-grow">
+        <div className="relative flex flex-grow">
           {showSidebar && <Sidebar />}
           <main
             className={`flex-grow overflow-y-auto ${
-              showSidebar ? "sm:ml-[16rem]" : ""}`}
+              showSidebar ? "sm:ml-[16rem]" : ""
+            }`}
           >
             <div className="container mx-auto mb-4 sm:mb-8 md:mb-12">
               <Routes>
@@ -141,10 +141,10 @@ function App() {
                   path="/marketing-research/need-and-importance"
                   element={<NeedAndImportance />}
                 />
-                <Route
+                {/* <Route
                   path="/marketing-research/market-analysis"
                   element={<MarketAnalysis />}
-                />
+                /> */}
               </Routes>
               {showNextPrevButtons && <NextPrevButtons routes={routes} />}
             </div>

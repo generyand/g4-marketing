@@ -1,11 +1,13 @@
 import React from "react";
+import MainTopicContainer from "../ui/MainTopicContainer";
+import MainTopicTitle from "../ui/MainTopicTitle";
 
 function SevenPs() {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold">The 7P's of Marketing</h1>
+    <MainTopicContainer>
+      <MainTopicTitle>The 7P's of Marketing</MainTopicTitle>
       {/* Content goes here */}
-    </div>
+    </MainTopicContainer>
   );
 }
 

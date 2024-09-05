@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import SubTopicContainer from "../../ui/SubTopicContainer";
+import SubTopicTitle from "../../ui/SubTopicTitle";
 
 const GuideToConduct = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Guide to Conduct Marketing Research</h1>
+    <SubTopicContainer>
+      <SubTopicTitle>Guide to Conduct Marketing Research</SubTopicTitle>
       <p>This page will provide a step-by-step guide on how to conduct effective marketing research.</p>
-    </div>
+    </SubTopicContainer>
   );
 };
 

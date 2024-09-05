@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import SubTopicContainer from "../../ui/SubTopicContainer";
+import SubTopicTitle from "../../ui/SubTopicTitle";
 
 const Process = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Process</h1>
+    <SubTopicContainer className="p-4">
+      <SubTopicTitle>6. Process</SubTopicTitle>
       <p>This page will contain information about processes in marketing.</p>
-    </div>
+    </SubTopicContainer>
   );
 };
 

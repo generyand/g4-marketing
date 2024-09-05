@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import SubTopicContainer from "../../ui/SubTopicContainer";
+import SubTopicTitle from "../../ui/SubTopicTitle";
 
 const Definition = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Definition of Branding</h1>
+    <SubTopicContainer>
+      <SubTopicTitle>Definition of Branding</SubTopicTitle>
       <p>This page will provide a comprehensive definition of branding and its importance in marketing.</p>
-    </div>
+    </SubTopicContainer>
   );
 };
 

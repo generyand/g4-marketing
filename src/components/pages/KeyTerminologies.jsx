@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { navigationConfig } from "../../data/navigationConfig";
 import { motion } from "framer-motion";
+import MainTopicContainer from "../ui/MainTopicContainer";
+import MainTopicTitle from "../ui/MainTopicTitle";
 
 function KeyTerminologies() {
   const keyTerminologies = navigationConfig.find(
@@ -9,15 +11,8 @@ function KeyTerminologies() {
   );
 
   return (
-    <div className="p-4 sm:p-8 lg:p-12">
-      <motion.h1
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl dark:text-white"
-      >
-        Key Terminologies
-      </motion.h1>
+    <MainTopicContainer>
+      <MainTopicTitle>Key Terminologies</MainTopicTitle>
       <motion.div
         className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
         initial="hidden"
@@ -50,7 +45,7 @@ function KeyTerminologies() {
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </MainTopicContainer>
   );
 }
 
