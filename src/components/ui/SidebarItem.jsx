@@ -18,7 +18,7 @@ const SidebarItem = ({ title, items, isOpen, toggleOpen, closeSidebar }) => {
     <div className="overflow-hidden">
       <button
         onClick={toggleOpen}
-        className={`flex justify-between items-center p-3 w-full text-lg font-medium ${
+        className={`flex justify-between items-center p-3 w-full text-lg md:text-sm lg:text-base font-medium ${
           isActive ? "text-blue-400 dark:bg-gray-800" : ""
         }`}
       >
@@ -45,7 +45,7 @@ const SidebarItem = ({ title, items, isOpen, toggleOpen, closeSidebar }) => {
                 className={({ isActive }) =>
                   isActive
                     ? "text-blue-400 text-base font-medium px-3 py-2 block pl-6 transition-color"
-                    : "text-base font-light px-3 py-2 block dark:text-gray-300 text-gray-600 pl-6 transition-color"
+                    : "text-base md:text-sm lg:text-base font-light px-3 py-2 block dark:text-gray-300 text-gray-600 pl-6 transition-color"
                 }
                 end={item.end}
                 onClick={() => handleItemClick(item.path)}

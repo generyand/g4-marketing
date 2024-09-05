@@ -1,29 +1,62 @@
 import React from "react";
-import LivePlanLogo from "../../../assets/keyterminologies/liveplan-logo.png";
+import { motion } from "framer-motion";
+import TeslaLogo from "../../../assets/keyterminologies/tesla-logo.png";
 
 const MarketingStrategyBusinessPlan = () => {
   return (
-    <div className="p-4 sm:p-8 md:p-12">
-      <h1 className="mb-4 text-2xl font-bold">
+    <div className="p-4 sm:p-8 lg:p-12">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-4 text-2xl font-bold"
+      >
         Marketing Strategy Business Plan
-      </h1>
-      <p className="mb-8">
-        Today’s market makes it extremely difficult for small business owners to
-        attract and retain those skills.
-      </p>
-      <p className="mb-2 font-bold">An Example of a Marketing Strategy:</p>
-      <div className="flex flex-col items-center p-4 rounded-lg sm:items-start bg-violet-200 dark:bg-violet-400 sm:flex-row">
-        <img
-          src={LivePlanLogo}
-          alt="LivePlan Logo"
-          className="w-1/2 mb-4 sm:w-64 sm:mb-0"
-        />
-        <p className="text-base sm:text-lg md:text-xl">
-          “LivePlan is incredibly simple and easy to use. The financial sales
-          forecasting tool is very intuitive and makes writing a business plan
-          more fun”.
-        </p>
-      </div>
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mb-8"
+      >
+        A{" "}
+        <span className="font-semibold text-blue-500">
+          Marketing Strategy Business Plan
+        </span>{" "}
+        is a document that outlines a company’s business goals and the marketing
+        approach to attract and engage customers, aligning marketing efforts
+        with overall business objectives for long-term success.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mb-2"
+      >
+        <p className="mb-2 font-bold">An Example of a Marketing Strategy:</p>
+        <div className="flex flex-col items-center p-4 bg-blue-200 rounded-lg sm:p-8 md:p-12 sm:items-start dark:bg-blue-100 lg:flex-row">
+          <motion.img
+            src={TeslaLogo}
+            alt="Tesla Logo"
+            className="w-1/2 mx-auto mb-4 sm:w-64 sm:mb-0"
+            style={{ width: "clamp(100px, 50%, 200px)" }}
+            loading="lazy"
+            decoding="async"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          />
+          <p className="text-base text-black sm:text-lg md:text-xl">
+            Tesla's marketing strategy focuses on innovation, sustainability,
+            and premium electric vehicles. Their business plan began by
+            targeting high-end cars to build a luxury brand, later funding more
+            affordable models like the Model 3. This combination of a strong
+            marketing strategy and scalable business plan has made Tesla a
+            leader in the electric vehicle market.
+          </p>
+        </div>
+      </motion.div>
     </div>
   );
 };

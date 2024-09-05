@@ -65,12 +65,16 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="flex font-sans bg-gray-100 dark:bg-gray-900 dark:text-white text-neutral-800">
-        <div className="w-full">
-          <Header />
-          <main className="flex">
-            {showSidebar && <Sidebar />}
-            <div className="flex-grow pb-16 sm:pb-0"> {/* Added padding-bottom for mobile */} {/* ... your existing routes ... */}
+      <div className="flex flex-col min-h-screen font-sans bg-gray-100 dark:bg-gray-900 dark:text-white text-neutral-800">
+        <Header />
+        <div className="relative flex flex-grow">
+          {showSidebar && <Sidebar />}
+          <main
+            className={`flex-grow overflow-y-auto ${
+              showSidebar ? "sm:ml-[16rem]" : ""
+            }`}
+          >
+            <div className="container mx-auto mb-12">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<AboutUs />} />
@@ -143,8 +147,6 @@ function App() {
                   element={<MarketAnalysis />}
                 />
               </Routes>
-
-              {/* Next and Previous Buttons */}
               {showNextPrevButtons && <NextPrevButtons routes={routes} />}
             </div>
           </main>
