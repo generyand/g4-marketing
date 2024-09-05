@@ -4,12 +4,12 @@ import TeslaLogo from "../../../assets/keyterminologies/tesla-logo.png";
 
 const MarketingStrategyBusinessPlan = () => {
   return (
-    <div className="p-4 sm:p-8 lg:p-12">
+    <div className="p-4 sm:p-8 lg:p-12 sm:text-lg md:text-2xl">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-4 text-2xl font-bold"
+        className="mb-4 text-2xl font-bold md:text-4xl"
       >
         Marketing Strategy Business Plan
       </motion.h1>
@@ -20,7 +20,7 @@ const MarketingStrategyBusinessPlan = () => {
         className="mb-8"
       >
         A{" "}
-        <span className="font-semibold text-blue-500">
+        <span className="font-bold text-blue-500">
           Marketing Strategy Business Plan
         </span>{" "}
         is a document that outlines a company’s business goals and the marketing
@@ -39,7 +39,7 @@ const MarketingStrategyBusinessPlan = () => {
           <motion.img
             src={TeslaLogo}
             alt="Tesla Logo"
-            className="w-1/2 mx-auto mb-4 sm:w-64 sm:mb-0"
+            className="mx-auto mb-4 w-1/2 sm:w-64 sm:mb-0"
             style={{ width: "clamp(100px, 50%, 200px)" }}
             loading="lazy"
             decoding="async"
@@ -47,7 +47,7 @@ const MarketingStrategyBusinessPlan = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           />
-          <p className="text-base text-black sm:text-lg md:text-xl">
+          <p className="text-base text-black sm:text-lg md:text-xl"> 
             Tesla's marketing strategy focuses on innovation, sustainability,
             and premium electric vehicles. Their business plan began by
             targeting high-end cars to build a luxury brand, later funding more

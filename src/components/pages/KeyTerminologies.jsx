@@ -9,7 +9,7 @@ function KeyTerminologies() {
   );
 
   return (
-    <div className="p-4">
+    <div className="p-4 sm:p-8 lg:p-12">
       <motion.h1
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
