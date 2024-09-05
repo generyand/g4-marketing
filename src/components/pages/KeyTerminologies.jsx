@@ -41,8 +41,8 @@ function KeyTerminologies() {
             transition={{ duration: 0.5 }}
           >
             <Link to={item.path} className="block h-full">
-              <div className="flex flex-col justify-center p-4 h-full bg-white rounded-lg border border-gray-200 transition-shadow hover:text-white dark:bg-gray-800 dark:border-gray-600 hover:shadow-lg hover:outline outline-1 dark:outline-white">
-                <h2 className="text-xl text-gray-800 sm:text-2xl dark:text-gray-100">
+              <div className="flex flex-col justify-center h-full p-4 transition-shadow bg-white border border-gray-200 rounded-lg hover:text-white dark:bg-gray-800 dark:border-gray-600 hover:shadow-lg hover:outline outline-1 dark:outline-white">
+                <h2 className="text-lg text-gray-800 sm:text-2xl dark:text-gray-100">
                   {item.title}
                 </h2>
               </div>
