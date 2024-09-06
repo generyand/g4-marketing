@@ -9,6 +9,10 @@ export const navigationConfig = [
         path: "/key-terminologies/marketing-strategy-business-plan",
       },
       {
+        title: "Target Market",
+        path: "/key-terminologies/target-market",
+      },
+      {
         title: "Competitor Analysis",
         path: "/key-terminologies/competitor-analysis",
       },

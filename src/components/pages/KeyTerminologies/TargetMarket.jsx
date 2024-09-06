@@ -1,35 +1,33 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Competitors from "../../../assets/keyterminologies/competitors-image.png";
-import Competitors2 from "../../../assets/keyterminologies/competitors2-image.png";
+
 import SubTopicContainer from "../../ui/SubTopicContainer";
 import SubTopicTitle from "../../ui/SubTopicTitle";
 import Highlight from "../../ui/Highlight";
+import TargetMarket1 from "../../../assets/keyterminologies/target-market-1.png";
+import TargetMarket2 from "../../../assets/keyterminologies/target-market-2.png";
 
-const CompetitorAnalysis = () => {
+function TargetMarket() {
   return (
     <SubTopicContainer>
-      <SubTopicTitle>Competitor Analysis</SubTopicTitle>
+      <SubTopicTitle>Target Market</SubTopicTitle>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="mb-8"
       >
-        <Highlight>Competitor analysis</Highlight> is the process of identifying
-        and evaluating the strengths, weaknesses, strategies, and market
-        positions of businesses that compete in the same industry. It helps
-        companies understand the competitive landscape, identify opportunities
-        for differentiation, and make informed decisions to gain a competitive
-        advantage.
+        A <Highlight>target market</Highlight> is a group of customers within a
+        business's serviceable available market at which a business aims its
+        marketing efforts and resources. It is a subset of the total market for
+        a product or service.
       </motion.p>
 
       <div className="flex flex-col flex-wrap gap-8 justify-center items-center mx-auto md:flex-row">
         <motion.img
-          src={Competitors}
+          src={TargetMarket1}
           alt="Competitors Illustration"
-          // className="hidden mx-auto md:block"
-          style={{ width: "clamp(200px, 100%, 540px)" }}
+          style={{ width: "clamp(150px, 75vw, 280px)" }}
           loading="lazy"
           decoding="async"
           initial={{ opacity: 0, y: 20 }}
@@ -38,10 +36,10 @@ const CompetitorAnalysis = () => {
         />
 
         <motion.img
-          src={Competitors2}
+          src={TargetMarket2}
           alt="Competitors Illustration 2"
-          // className="mx-auto md:hidden"
-          style={{ width: "clamp(200px, 100%, 540px)" }}
+          className="hidden md:block"
+          style={{ width: "clamp(200px, 75vw, 280px)" }}
           loading="lazy"
           decoding="async"
           initial={{ opacity: 0, y: 20 }}
@@ -51,6 +49,6 @@ const CompetitorAnalysis = () => {
       </div>
     </SubTopicContainer>
   );
-};
+}
 
-export default CompetitorAnalysis;
+export default TargetMarket;
