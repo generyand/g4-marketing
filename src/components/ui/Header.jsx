@@ -23,7 +23,7 @@ function Header() {
   };
 
   return (
-    <header className="sticky top-0 w-full bg-white shadow-md z-[999] bg-opacity-70 backdrop-blur-md dark:bg-opacity-70 dark:bg-gray-800">
+    <header className="sticky top-0 w-full bg-white shadow-md z-[999] bg-opacity-70 backdrop-blur-md dark:bg-opacity-60 dark:bg-gray-800">
       <div className="flex items-center justify-between p-4 mx-auto max-w-screen-2xl wrapper">
         <Logo />
         <div className="flex-grow hidden max-w-md mx-4 sm:block">
