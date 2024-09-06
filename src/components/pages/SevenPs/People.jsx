@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import SubTopicContainer from "../../ui/SubTopicContainer";
+import SubTopicTitle from "../../ui/SubTopicTitle";
 
 const People = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">People</h1>
+    <SubTopicContainer>
+      <SubTopicTitle>5. People</SubTopicTitle>
       <p>This page will contain information about the role of people in marketing.</p>
-    </div>
+    </SubTopicContainer>
   );
 };
 

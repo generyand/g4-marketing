@@ -1,11 +1,13 @@
 import React from "react";
+import MainTopicContainer from "../ui/MainTopicContainer";
+import MainTopicTitle from "../ui/MainTopicTitle";
 
 function Branding() {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold">Branding</h1>
+    <MainTopicContainer>
+      <MainTopicTitle>Branding</MainTopicTitle>
       {/* Content goes here */}
-    </div>
+    </MainTopicContainer>
   );
 }
 

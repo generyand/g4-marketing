@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { navigationConfig } from "../../data/navigationConfig";
 import { motion } from "framer-motion";
+import MainTopicContainer from "../ui/MainTopicContainer";
+import MainTopicTitle from "../ui/MainTopicTitle";
 
 function KeyTerminologies() {
   const keyTerminologies = navigationConfig.find(
@@ -9,15 +11,8 @@ function KeyTerminologies() {
   );
 
   return (
-    <div className="p-4 sm:p-8 lg:p-12">
-      <motion.h1
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl dark:text-white"
-      >
-        Key Terminologies
-      </motion.h1>
+    <MainTopicContainer>
+      <MainTopicTitle>Key Terminologies</MainTopicTitle>
       <motion.div
         className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
         initial="hidden"
@@ -41,8 +36,8 @@ function KeyTerminologies() {
             transition={{ duration: 0.5 }}
           >
             <Link to={item.path} className="block h-full">
-              <div className="flex flex-col justify-center p-4 h-full bg-white rounded-lg border border-gray-200 transition-shadow hover:text-white dark:bg-gray-800 dark:border-gray-600 hover:shadow-lg hover:outline outline-1 dark:outline-white">
-                <h2 className="text-xl text-gray-800 sm:text-2xl dark:text-gray-100">
+              <div className="flex flex-col justify-center h-full p-4 transition-shadow bg-white border border-gray-200 rounded-lg hover:text-white dark:bg-gray-800 dark:border-gray-600 hover:shadow-lg hover:outline outline-1 dark:outline-white">
+                <h2 className="text-lg text-gray-800 sm:text-2xl dark:text-gray-100">
                   {item.title}
                 </h2>
               </div>
@@ -50,7 +45,7 @@ function KeyTerminologies() {
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </MainTopicContainer>
   );
 }
 

@@ -1,18 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import TeslaLogo from "../../../assets/keyterminologies/tesla-logo.png";
+import SubTopicContainer from "../../ui/SubTopicContainer";
+import SubTopicTitle from "../../ui/SubTopicTitle";
 
 const MarketingStrategyBusinessPlan = () => {
   return (
-    <div className="p-4 sm:p-8 lg:p-12 sm:text-lg md:text-2xl">
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mb-4 text-2xl font-bold md:text-4xl"
-      >
-        Marketing Strategy Business Plan
-      </motion.h1>
+    <SubTopicContainer>
+      <SubTopicTitle>Marketing Strategy Business Plan</SubTopicTitle>
+
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -39,7 +35,7 @@ const MarketingStrategyBusinessPlan = () => {
           <motion.img
             src={TeslaLogo}
             alt="Tesla Logo"
-            className="mx-auto mb-4 w-1/2 sm:w-64 sm:mb-0"
+            className="w-1/2 mx-auto mb-4 sm:w-64 sm:mb-0"
             style={{ width: "clamp(100px, 50%, 200px)" }}
             loading="lazy"
             decoding="async"
@@ -47,7 +43,7 @@ const MarketingStrategyBusinessPlan = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           />
-          <p className="text-base text-black sm:text-lg md:text-xl"> 
+          <p className="text-base text-black sm:text-lg md:text-xl">
             Tesla's marketing strategy focuses on innovation, sustainability,
             and premium electric vehicles. Their business plan began by
             targeting high-end cars to build a luxury brand, later funding more
@@ -57,7 +53,7 @@ const MarketingStrategyBusinessPlan = () => {
           </p>
         </div>
       </motion.div>
-    </div>
+    </SubTopicContainer>
   );
 };
 

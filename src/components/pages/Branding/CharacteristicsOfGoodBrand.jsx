@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import SubTopicContainer from "../../ui/SubTopicContainer";
+import SubTopicTitle from "../../ui/SubTopicTitle";
 
 const CharacteristicsOfGoodBrand = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Characteristics of a Good Brand</h1>
+    <SubTopicContainer>
+      <SubTopicTitle>Characteristics of a Good Brand</SubTopicTitle>
       <p>This page will outline the key characteristics that make up a strong and effective brand.</p>
-    </div>
+    </SubTopicContainer>
   );
 };
 
