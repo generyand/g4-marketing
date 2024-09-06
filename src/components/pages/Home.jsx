@@ -29,7 +29,7 @@ function Home() {
           concept of marketing research and marketing plan.
         </p>
 
-        <button className="px-4 py-2 text-white transition-all duration-200 bg-blue-500 border-2 border-blue-500 rounded-md hover:bg-transparent hover:text-blue-500 sm:text-xl lg:text-2xl">
+        <button className="px-4 py-2 text-white transition-all duration-200 bg-blue-500 border-2 border-blue-500 rounded-md hover:bg-transparent hover:text-blue-500 sm:text-xl">
           <Link to="/key-terminologies">Explore Topics</Link>
         </button>
       </div>
