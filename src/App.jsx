@@ -66,14 +66,14 @@ function App() {
     <ThemeProvider>
       <div className="flex flex-col min-h-screen font-sans bg-gray-100 dark:bg-gray-900 dark:text-white text-neutral-800">
         <Header />
-        <GlowingBlob />
-        <div className="relative flex flex-grow">
+        <div className="flex flex-grow">
           {showSidebar && <Sidebar />}
           <main
             className={`flex-grow overflow-y-auto relative ${
               showSidebar ? "sm:ml-[16rem]" : ""
             }`}
           >
+            <GlowingBlob />
             <div className="container relative z-10 mx-auto mb-4 sm:mb-8 md:mb-12">
               <Routes>
                 <Route path="/" element={<Home />} />
