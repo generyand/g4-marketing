@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import SubTopicContainer from "../../ui/SubTopicContainer";
 import SubTopicTitle from "../../ui/SubTopicTitle";
-import ProductServicePlanImage1 from "../../../assets/keyterminologies/plan1.webp";
-import ProductServicePlanImage2 from "../../../assets/keyterminologies/plan2.webp";
+import ProductServicePlanImage1 from "../../../assets/keyterminologies/product-service-plan-1.webp";
+import ProductServicePlanImage2 from "../../../assets/keyterminologies/product-service-plan-2.webp";
 
 const ProductServicePlan = () => {
   return (
