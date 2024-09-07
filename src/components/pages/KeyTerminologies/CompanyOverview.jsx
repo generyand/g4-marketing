@@ -55,7 +55,7 @@ const CompanyOverview = () => {
         includes your:
       </motion.p>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
         {data.map((item) => (
           <MotionCard key={item.title} item={item} />
         ))}
@@ -74,7 +74,7 @@ const MotionCard = ({ item }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5 }}
-      className="px-2 py-8 text-center bg-blue-500 rounded-md backdrop-blur-md bg-opacity-35"
+      className="px-2 py-4 text-center bg-blue-500 rounded-md md:py-8 backdrop-blur-md bg-opacity-35"
     >
       <img
         src={item.image}
@@ -84,7 +84,7 @@ const MotionCard = ({ item }) => {
         loading="lazy"
         decoding="async"
       />
-      <p className="text-base md:text-lg">{item.title}</p>
+      <p className="text-sm md:text-base lg:text-lg">{item.title}</p>
     </motion.div>
   );
 };
