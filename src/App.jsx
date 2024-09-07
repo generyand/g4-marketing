@@ -1,16 +1,29 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+
+// Context
+import { ThemeProvider } from "./context/ThemeContext";
+
+// UI Components
 import Header from "./components/ui/Header";
 import Sidebar from "./components/ui/Sidebar";
 import NextPrevButtons from "./components/ui/NextPrevButtons";
+import GlowingBlob from "./components/ui/GlowingBlob";
+
+// Page Components
 import Home from "./components/pages/Home";
 import AboutUs from "./components/pages/AboutUs";
+
+// Key Terminologies
 import KeyTerminologies from "./components/pages/KeyTerminologies";
 import MarketingStrategyBusinessPlan from "./components/pages/KeyTerminologies/MarketingStrategyBusinessPlan";
+import TargetMarket from "./components/pages/KeyTerminologies/TargetMarket";
 import CompetitorAnalysis from "./components/pages/KeyTerminologies/CompetitorAnalysis";
 import CompanyOverview from "./components/pages/KeyTerminologies/CompanyOverview";
 import ProductServicePlan from "./components/pages/KeyTerminologies/ProductServicePlan";
 import MarketingPlan from "./components/pages/KeyTerminologies/MarketingPlan";
+
+// Seven Ps of Marketing
 import SevenPs from "./components/pages/SevenPs";
 import Product from "./components/pages/SevenPs/Product";
 import Pricing from "./components/pages/SevenPs/Pricing";
@@ -19,16 +32,18 @@ import Promotion from "./components/pages/SevenPs/Promotion";
 import People from "./components/pages/SevenPs/People";
 import Process from "./components/pages/SevenPs/Process";
 import PhysicalEvidence from "./components/pages/SevenPs/PhysicalEvidence";
+
+// Branding
 import Branding from "./components/pages/Branding";
 import HistoryOfBranding from "./components/pages/Branding/HistoryOfBranding";
 import Definition from "./components/pages/Branding/Definition";
 import CharacteristicsOfGoodBrand from "./components/pages/Branding/CharacteristicsOfGoodBrand";
-import { ThemeProvider } from "./context/ThemeContext";
+
+// Marketing Research
 import MarketingResearch from "./components/pages/MarketingResearch";
 import ReasonsToConductResearch from "./components/pages/MarketingResearch/ReasonsToConductResearch";
 import GuideToConduct from "./components/pages/MarketingResearch/GuideToConduct";
 import NeedAndImportance from "./components/pages/MarketingResearch/NeedAndImportance";
-import GlowingBlob from "./components/ui/GlowingBlob";
 
 function App() {
   const location = useLocation();
@@ -38,6 +53,7 @@ function App() {
   const routes = [
     "/key-terminologies",
     "/key-terminologies/marketing-strategy-business-plan",
+    "/key-terminologies/target-market",
     "/key-terminologies/competitor-analysis",
     "/key-terminologies/company-overview",
     "/key-terminologies/product-service-plan",
@@ -70,8 +86,7 @@ function App() {
           {showSidebar && <Sidebar />}
           <main
             className={`flex-grow overflow-y-auto relative ${
-              showSidebar ? "sm:ml-[16rem]" : ""
-            }`}
+              showSidebar ? "sm:ml-[16rem]" : ""}`}
           >
             <GlowingBlob />
             <div className="container relative z-10 mx-auto mb-4 sm:mb-8 md:mb-12">
@@ -85,6 +100,10 @@ function App() {
                 <Route
                   path="/key-terminologies/marketing-strategy-business-plan"
                   element={<MarketingStrategyBusinessPlan />}
+                />
+                <Route
+                  path="/key-terminologies/target-market"
+                  element={<TargetMarket />}
                 />
                 <Route
                   path="/key-terminologies/competitor-analysis"

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import TeslaLogo from "../../../assets/keyterminologies/tesla-logo.png";
 import SubTopicContainer from "../../ui/SubTopicContainer";
 import SubTopicTitle from "../../ui/SubTopicTitle";
+import Highlight from "../../ui/Highlight";
 
 const MarketingStrategyBusinessPlan = () => {
   return (
@@ -15,13 +16,10 @@ const MarketingStrategyBusinessPlan = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="mb-8"
       >
-        A{" "}
-        <span className="font-bold text-blue-500">
-          Marketing Strategy Business Plan
-        </span>{" "}
-        is a document that outlines a company’s business goals and the marketing
-        approach to attract and engage customers, aligning marketing efforts
-        with overall business objectives for long-term success.
+        A <Highlight>Marketing Strategy Business Plan</Highlight> is a document
+        that outlines a company’s business goals and the marketing approach to
+        attract and engage customers, aligning marketing efforts with overall
+        business objectives for long-term success.
       </motion.p>
 
       <motion.div
@@ -35,7 +33,7 @@ const MarketingStrategyBusinessPlan = () => {
           <motion.img
             src={TeslaLogo}
             alt="Tesla Logo"
-            className="w-1/2 mx-auto mb-4 sm:w-64 sm:mb-0"
+            className="mx-auto mb-4 w-1/2 sm:w-64 sm:mb-0"
             style={{ width: "clamp(100px, 50%, 200px)" }}
             loading="lazy"
             decoding="async"
