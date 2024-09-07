@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import TeslaLogo from "../../../assets/keyterminologies/tesla-logo.png";
+import TeslaLogo from "../../../assets/keyterminologies/tesla-logo.webp";
 import SubTopicContainer from "../../ui/SubTopicContainer";
 import SubTopicTitle from "../../ui/SubTopicTitle";
 import Highlight from "../../ui/Highlight";
@@ -33,7 +33,7 @@ const MarketingStrategyBusinessPlan = () => {
           <motion.img
             src={TeslaLogo}
             alt="Tesla Logo"
-            className="mx-auto mb-4 w-1/2 sm:w-64 sm:mb-0"
+            className="w-1/2 mx-auto mb-4 sm:w-64 sm:mb-0"
             style={{ width: "clamp(100px, 50%, 200px)" }}
             loading="lazy"
             decoding="async"

@@ -3,11 +3,11 @@ import { motion, useInView } from "framer-motion";
 import SubTopicContainer from "../../ui/SubTopicContainer";
 import SubTopicTitle from "../../ui/SubTopicTitle";
 import Highlight from "../../ui/Highlight";
-import History from "../../../assets/keyterminologies/history.png";
-import ManagementTeam from "../../../assets/keyterminologies/management-team.png";
-import Location from "../../../assets/keyterminologies/location.png"; // Location
-import MissionStatement from "../../../assets/keyterminologies/mission-statement.png"; // Mission Statement
-import LegalStructure from "../../../assets/keyterminologies/legal-structure.png"; // Legal Structure
+import History from "../../../assets/keyterminologies/history.webp";
+import ManagementTeam from "../../../assets/keyterminologies/management-team.webp";
+import Location from "../../../assets/keyterminologies/location.webp"; // Location
+import MissionStatement from "../../../assets/keyterminologies/mission-statement.webp"; // Mission Statement
+import LegalStructure from "../../../assets/keyterminologies/legal-structure.webp"; // Legal Structure
 
 const data = [
   {

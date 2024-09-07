@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import SubTopicContainer from "../../ui/SubTopicContainer";
 import SubTopicTitle from "../../ui/SubTopicTitle";
 import Highlight from "../../ui/Highlight";
-import TargetMarket1 from "../../../assets/keyterminologies/target-market-1.png";
-import TargetMarket2 from "../../../assets/keyterminologies/target-market-2.png";
+import TargetMarket1 from "../../../assets/keyterminologies/target-market-1.webp";
+import TargetMarket2 from "../../../assets/keyterminologies/target-market-2.webp";
 
 function TargetMarket() {
   return (
@@ -23,10 +23,10 @@ function TargetMarket() {
         a product or service.
       </motion.p>
 
-      <div className="flex flex-col flex-wrap gap-8 justify-center items-center mx-auto md:flex-row">
+      <div className="flex flex-col flex-wrap items-center justify-center gap-8 mx-auto md:flex-row">
         <motion.img
           src={TargetMarket1}
-          alt="Competitors Illustration"
+          alt="Target Market Illustration"
           style={{ width: "clamp(150px, 75vw, 280px)" }}
           loading="lazy"
           decoding="async"
@@ -37,7 +37,7 @@ function TargetMarket() {
 
         <motion.img
           src={TargetMarket2}
-          alt="Competitors Illustration 2"
+          alt="Target Market Illustration 2"
           className="hidden md:block"
           style={{ width: "clamp(200px, 75vw, 280px)" }}
           loading="lazy"

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Competitors from "../../../assets/keyterminologies/competitors-image.png";
-import Competitors2 from "../../../assets/keyterminologies/competitors2-image.png";
+import Competitors from "../../../assets/keyterminologies/competitors-image.webp";
+import Competitors2 from "../../../assets/keyterminologies/competitors2-image.webp";
 import SubTopicContainer from "../../ui/SubTopicContainer";
 import SubTopicTitle from "../../ui/SubTopicTitle";
 import Highlight from "../../ui/Highlight";
