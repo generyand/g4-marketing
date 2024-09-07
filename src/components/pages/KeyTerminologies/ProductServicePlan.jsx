@@ -9,12 +9,17 @@ const ProductServicePlan = () => {
   return (
     <SubTopicContainer>
       <SubTopicTitle>Product/Service Plan</SubTopicTitle>
-      <p className="mb-8">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mb-8"
+      >
         This is the part of your business plan where you will describe the
         specific products or services you're going to offer. You'll fully
         explain the concept for your business, along with all aspects of
         purchasing, manufacturing, packaging, and distribution.
-      </p>
+      </motion.p>
 
       <div className="flex flex-col flex-wrap items-center justify-around gap-8 mx-auto md:flex-row">
         <motion.img
