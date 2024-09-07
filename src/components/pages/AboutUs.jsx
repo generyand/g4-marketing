@@ -60,7 +60,7 @@ const TeamMember = ({ name, role, contribution }) => (
 function AboutUs() {
   return (
     <SubTopicContainer>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <SubTopicTitle>About Us</SubTopicTitle>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
