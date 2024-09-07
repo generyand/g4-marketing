@@ -2,7 +2,6 @@ import React from "react";
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
 import Animation from "../../assets/home/Animation-1.json";
 
 function Home() {
