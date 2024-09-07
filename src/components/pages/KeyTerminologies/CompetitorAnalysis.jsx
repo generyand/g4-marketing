@@ -24,7 +24,7 @@ const CompetitorAnalysis = () => {
         advantage.
       </motion.p>
 
-      <div className="flex flex-col flex-wrap gap-8 justify-center items-center mx-auto md:flex-row">
+      <div className="flex flex-col flex-wrap items-center justify-center gap-8 mx-auto md:flex-row">
         <motion.img
           src={Competitors}
           alt="Competitors Illustration"

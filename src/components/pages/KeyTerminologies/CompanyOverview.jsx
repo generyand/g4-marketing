@@ -42,8 +42,8 @@ const CompanyOverview = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="mb-4"
       >
-        <Highlight>Company Overview</Highlight> an essential part of a business
-        plan (also known as company information or a company summary).
+        <Highlight>Company Overview</Highlight> is an essential part of a
+        business plan (also known as company information or a company summary).
       </motion.p>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
