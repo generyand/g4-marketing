@@ -49,7 +49,7 @@ const CompanyOverview = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mb-16"
+        className="mb-8 sm:mb-12 md:mb-16"
       >
         It's an overview of the most important points about your company, which
         includes your:
@@ -74,7 +74,7 @@ const MotionCard = ({ item }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5 }}
-      className="py-8 text-center bg-blue-500 rounded-md backdrop-blur-md bg-opacity-35"
+      className="px-2 py-8 text-center bg-blue-500 rounded-md backdrop-blur-md bg-opacity-35"
     >
       <img
         src={item.image}
@@ -84,7 +84,7 @@ const MotionCard = ({ item }) => {
         loading="lazy"
         decoding="async"
       />
-      <p>{item.title}</p>
+      <p className="text-base md:text-lg">{item.title}</p>
     </motion.div>
   );
 };
