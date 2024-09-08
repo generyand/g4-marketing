@@ -25,7 +25,7 @@ const ProductServicePlan = () => {
         <motion.img
           src={ProductServicePlanImage1}
           alt="Competitors Illustration"
-          className="hidden mx-auto md:block"
+          className="hidden md:block"
           style={{ width: "clamp(120px, 70%, 320px)" }}
           loading="lazy"
           decoding="async"
