@@ -15,7 +15,7 @@ const Pricing = () => {
       <img
         src={PricingPlan}
         alt="Pricing Plan"
-        className="mx-auto my-4 md:my-8 md:block"
+        className="mx-auto md:my-2 md:block"
         style={{ width: "clamp(200px, 100%, 360px)" }}
         loading="lazy"
         decoding="async"
