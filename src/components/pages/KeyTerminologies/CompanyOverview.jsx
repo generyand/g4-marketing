@@ -74,7 +74,7 @@ const MotionCard = ({ item }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5 }}
-      className="px-2 py-4 text-center bg-blue-500 rounded-md md:py-8 backdrop-blur-md bg-opacity-35"
+      className="px-2 py-4 text-center bg-blue-500 rounded-md backdrop-blur-md md:py-8 bg-opacity-35"
     >
       <img
         src={item.image}
