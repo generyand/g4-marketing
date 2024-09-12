@@ -55,7 +55,7 @@ const CompanyOverview = () => {
         includes your:
       </motion.p>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 md:gap-8 md:grid-cols-3">
         {data.map((item) => (
           <MotionCard key={item.title} item={item} />
         ))}

@@ -11,18 +11,6 @@ function TargetMarket() {
   return (
     <SubTopicContainer>
       <SubTopicTitle>Target Market</SubTopicTitle>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="mb-8"
-      >
-        A <Highlight>target market</Highlight> is a group of customers within a
-        business's serviceable available market at which a business aims its
-        marketing efforts and resources. It is a subset of the total market for
-        a product or service.
-      </motion.p>
-
       <div className="flex flex-col flex-wrap items-center justify-center gap-8 mx-auto md:flex-row">
         <motion.img
           src={TargetMarket1}
@@ -47,6 +35,17 @@ function TargetMarket() {
           transition={{ duration: 0.5, delay: 0.4 }}
         />
       </div>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mb-8"
+      >
+        A <Highlight>target market</Highlight> is a group of customers within a
+        business's serviceable available market at which a business aims its
+        marketing efforts and resources. It is a subset of the total market for
+        a product or service.
+      </motion.p>
     </SubTopicContainer>
   );
 }
