@@ -7,7 +7,7 @@ const Promotion = () => {
   return (
     <SubTopicContainer>
       <SubTopicTitle>4. Promotion</SubTopicTitle>
-      <div className="flex flex-col gap-2 justify-center items-center p-4 mb-12 rounded-lg md:gap-8 md:mb-0 sm:p-8 md:p-12 sm:items-start lg:flex-row">
+      <div className="flex flex-col gap-2 justify-center items-center mb-12 rounded-lg md:gap-8 md:mb-0 sm:p-8 md:p-12 sm:items-start lg:flex-row">
         <img
           src={PromotionImage}
           alt="Picture"

@@ -50,7 +50,7 @@ function SevenPs() {
     <MainTopicContainer>
       <MainTopicTitle>The 7P's of Marketing</MainTopicTitle>
       {/* Content goes here */}
-      <motion.p
+      {/* <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -58,7 +58,7 @@ function SevenPs() {
       >
         "Everything matters with marketing, and that broad, integrated
         perspective is often necessary."
-      </motion.p>
+      </motion.p> */}
       <SubTopicTitle>Traditional Marketing Mix</SubTopicTitle>
       <motion.p
         initial={{ opacity: 0, y: 20 }}

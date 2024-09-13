@@ -8,7 +8,7 @@ const Place = () => {
   return (
     <SubTopicContainer>
       <SubTopicTitle>3. Place</SubTopicTitle>
-      <div className="flex flex-col gap-2 justify-center items-center p-4 mb-12 rounded-lg md:gap-8 md:mb-0 sm:p-8 md:p-12 sm:items-start lg:flex-row">
+      <div className="flex flex-col gap-2 justify-center items-center mb-12 rounded-lg md:gap-8 md:mb-0 sm:p-8 md:p-12 sm:items-start lg:flex-row">
         <img
           src={ProductImage}
           alt="Picture"
@@ -26,7 +26,7 @@ const Place = () => {
           the place of distribution or selling. 
         </p>
       </div>
-      <div className="flex flex-col gap-2 justify-center items-center p-4 mb-12 rounded-lg md:gap-8 sm:p-8 md:p-12 sm:items-start lg:flex-row">
+      <div className="flex flex-col gap-2 justify-center items-center mb-12 rounded-lg md:gap-8 sm:p-8 md:p-12 sm:items-start lg:flex-row">
         <img
           src={ServiceImage}
           alt="Picture"

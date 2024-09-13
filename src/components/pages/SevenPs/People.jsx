@@ -8,7 +8,27 @@ const People = () => {
   return (
     <SubTopicContainer>
       <SubTopicTitle>5. People</SubTopicTitle>
-      <img
+
+      <div className="flex flex-col gap-2 justify-center items-center mb-12 rounded-lg md:gap-8 md:mb-0 sm:p-8 md:p-12 sm:items-start lg:flex-row">
+        <img
+          src={PeopleImage}
+          alt="Picture"
+          className="mx-auto mb-4 w-1/2 sm:w-64 sm:mb-0"
+          style={{ width: "clamp(160px, 20%, 200px)" }}
+          loading="lazy"
+          decoding="async"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+        <p className="self-center">
+          In the production of a product, the people needed to do the tasks are
+          not directly dealing with the customers so that customer service
+          training is not a priority, but production-related training is.{" "}
+        </p>
+      </div>
+
+      {/* <img
         src={PeopleImage}
         alt="People Image"
         className="mx-auto mt-4 mb-4 md:block"
@@ -23,24 +43,24 @@ const People = () => {
         In the production of a product, the people needed to do the tasks are
         not directly dealing with the customers so that customer service
         training is not a priority, but production-related training is.{" "}
-      </p>
+      </p> */}
       <p className="mb-8 md:mb-12">
         People element is vitally important in the service marketing mix. When a
         service is being delivered, the person delivering it is not unique from
         the service itself.
       </p>
 
-      <div className="flex flex-col items-center justify-center gap-2 p-4 mb-4 bg-blue-200 rounded-lg md:gap-8 md:mb-0 sm:items-start lg:flex-row dark:bg-blue-100 dark:text-gray-800">
+      <div className="flex flex-col gap-2 justify-center items-center p-4 mb-4 bg-blue-200 rounded-lg md:gap-8 md:mb-0 sm:items-start lg:flex-row dark:bg-blue-100 dark:text-gray-800">
         <img
           src={AngryWaiter}
           alt="Picture"
-          className="w-1/2 mx-auto mb-4 rounded-md sm:w-64 sm:mb-0"
+          className="mx-auto mb-4 w-1/2 rounded-md sm:w-64 sm:mb-0"
           style={{ width: "clamp(140px, 20%, 200px)" }}
           loading="lazy"
           decoding="async"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          // initial={{ opacity: 0, y: 20 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 0.5 }}
         />
         <p className="self-center">
           When dining at a restaurant, if a rude waiter is encountered, the
