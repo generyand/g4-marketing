@@ -30,12 +30,12 @@ const People = () => {
         the service itself.
       </p>
 
-      <div className="flex flex-col items-center justify-center gap-2 p-4 mb-12 bg-blue-200 rounded-lg md:gap-8 md:mb-0 sm:items-start lg:flex-row dark:bg-blue-100 dark:text-gray-800">
+      <div className="flex flex-col items-center justify-center gap-2 p-4 mb-4 bg-blue-200 rounded-lg md:gap-8 md:mb-0 sm:items-start lg:flex-row dark:bg-blue-100 dark:text-gray-800">
         <img
           src={AngryWaiter}
           alt="Picture"
           className="w-1/2 mx-auto mb-4 rounded-md sm:w-64 sm:mb-0"
-          style={{ width: "clamp(100px, 20%, 200px)" }}
+          style={{ width: "clamp(140px, 20%, 200px)" }}
           loading="lazy"
           decoding="async"
           initial={{ opacity: 0, y: 20 }}
