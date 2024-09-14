@@ -9,11 +9,11 @@ const People = () => {
     <SubTopicContainer>
       <SubTopicTitle>5. People</SubTopicTitle>
 
-      <div className="flex flex-col gap-2 justify-center items-center mb-12 rounded-lg md:gap-8 md:mb-0 sm:p-8 md:p-12 sm:items-start lg:flex-row">
+      <div className="flex flex-col items-center justify-center gap-2 mb-12 rounded-lg md:gap-8 md:mb-0 sm:p-8 md:p-12 sm:items-start lg:flex-row">
         <img
           src={PeopleImage}
           alt="Picture"
-          className="mx-auto mb-4 w-1/2 sm:w-64 sm:mb-0"
+          className="w-1/2 mx-auto mb-4 sm:w-64 sm:mb-0"
           style={{ width: "clamp(160px, 20%, 200px)" }}
           loading="lazy"
           decoding="async"
@@ -50,11 +50,11 @@ const People = () => {
         the service itself.
       </p>
 
-      <div className="flex flex-col gap-2 justify-center items-center p-4 mb-4 bg-blue-200 rounded-lg md:gap-8 md:mb-0 sm:items-start lg:flex-row dark:bg-blue-100 dark:text-gray-800">
+      <div className="flex flex-col items-center justify-center gap-2 p-4 mb-4 bg-blue-200 rounded-lg md:gap-8 md:mb-0 sm:items-start lg:flex-row dark:bg-blue-100 dark:text-gray-800">
         <img
           src={AngryWaiter}
           alt="Picture"
-          className="mx-auto mb-4 w-1/2 rounded-md sm:w-64 sm:mb-0"
+          className="w-1/2 mx-auto mb-4 rounded-md sm:w-64 sm:mb-0"
           style={{ width: "clamp(140px, 20%, 200px)" }}
           loading="lazy"
           decoding="async"
