@@ -79,7 +79,9 @@ const NeedAndImportance = () => {
         >
           <h2 className="mb-2 text-lg font-bold md:text-3xl">{item.title}</h2>
           <div className="p-4 bg-blue-100 border border-blue-300 rounded-lg bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 sm:p-6">
-            <p className="font-light text-gray-800 dark:text-white">{item.description}</p>
+            <p className="font-light text-gray-800 dark:text-white">
+              {item.description}
+            </p>
           </div>
         </motion.div>
       ))}
