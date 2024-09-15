@@ -25,7 +25,7 @@ const brandingData = [
   {
     title: "Service Mark",
     image: ServiceMark,
-    description: "A service mark is the same as a trademark except that it refers to a service offering. Below are examples of recognized local trademarks/logos.",
+    description: "A service mark is the same as a trademark except that it refers to a service offering.",
   },
   // Add more objects here for additional branding elements
 ];

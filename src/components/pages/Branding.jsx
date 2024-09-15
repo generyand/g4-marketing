@@ -24,7 +24,6 @@ function Branding() {
         <Highlight>Branding</Highlight> is the process of creating a unique identity for a product,
         service, or company. It involves developing visual elements to create a
         memorable image that distinguishes the brand from competitors.
-        from its competitors.
       </p>
     </MainTopicContainer>
   );
