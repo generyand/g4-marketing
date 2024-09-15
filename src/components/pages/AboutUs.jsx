@@ -98,7 +98,7 @@ const TechnologyCard = ({ name, description, icon: Icon }) => (
       <div className="p-4 mb-4 bg-blue-100 rounded-full dark:bg-blue-900">
         <Icon className="w-8 h-8 text-blue-500 dark:text-blue-300" />
       </div>
-      <h4 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">
+      <h4 className="mb-1 text-base font-semibold text-gray-800 md:text-xl dark:text-gray-200">
         {name}
       </h4>
       <p className="text-xs text-gray-700 dark:text-gray-300">{description}</p>
@@ -118,14 +118,11 @@ function AboutUs() {
           viewport={{ once: true }}
           className="mb-6 text-gray-700 dark:text-gray-300 sm:text-xl"
         >
-          Welcome to our Marketing Plan presentation website! This presentation
-          was created as part of our entrepreneurship course to explore the
-          critical role of a well-structured marketing plan in business success.
-          Through this presentation, we aim to provide insights into key
-          marketing concepts, strategies, and how companies can leverage them to
-          compete effectively in the marketplace. Our goal is to offer a clear
-          understanding of the 7P's of marketing, branding, and the importance
-          of market research, all presented in a dynamic and interactive way.
+          Welcome to our Marketing Plan presentation website! Created as part of
+          our entrepreneurship course, this presentation explores the vital role
+          of a marketing plan in business success. We provide insights into key
+          marketing concepts, including the 7P's, branding, and market research,
+          to show how companies can compete effectively.
         </motion.p>
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
