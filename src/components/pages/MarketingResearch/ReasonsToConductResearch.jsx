@@ -67,7 +67,7 @@ const ReasonsToConductResearch = () => {
             {reason.title}
           </h2>
           <div className="p-4 bg-blue-100 border border-blue-300 rounded-lg bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 sm:p-6">
-            <p className="text-gray-800 dark:text-white">
+            <p className="font-light text-gray-800 dark:text-white">
               {reason.description}
             </p>
           </div>

@@ -69,7 +69,7 @@ const Definition = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             />
-            <p className="self-center text-gray-800 dark:text-white">
+            <p className="self-center font-light text-gray-800 dark:text-white">
               {item.description}
             </p>
           </div>
