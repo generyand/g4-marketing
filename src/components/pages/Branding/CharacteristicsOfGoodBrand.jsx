@@ -7,7 +7,7 @@ const CharacteristicsOfGoodBrand = () => {
     <SubTopicContainer>
       <SubTopicTitle>Characteristics of a Good Brand</SubTopicTitle>
       <p className="mb-4 md:mb-8">This page outlines the key characteristics that make up a strong and effective brand.</p>
-      <div className="mb-8 overflow-hidden text-xs text-center rounded-lg md:text-base md:mb-12">
+      <div className="mb-8 overflow-hidden text-xs rounded-lg md:text-base md:mb-12">
         <table className="min-w-full overflow-hidden bg-gray-300 border-collapse table-auto">
           <thead>
             <tr className="text-white bg-blue-500">
