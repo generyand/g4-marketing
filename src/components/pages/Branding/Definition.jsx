@@ -5,6 +5,7 @@ import Brand from "../../../assets/branding/brand.webp";
 import BrandName from "../../../assets/branding/brand-name.webp";
 import TradeMark from "../../../assets/branding/trademark.webp";
 import ServiceMark from "../../../assets/branding/service-mark.webp";
+import { motion } from "framer-motion";
 
 const brandingData = [
   {
@@ -46,7 +47,15 @@ const Definition = () => {
       </p>
 
       {brandingData.map((item, index) => (
-        <div key={index} className="flex flex-col mb-8 md:mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          // animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          key={index}
+          className="flex flex-col mb-8 md:mb-12"
+        >
           <h2 className="mb-4 text-xl font-bold md:text-3xl">{item.title}</h2>
           <div className="flex flex-col gap-2 p-4 bg-blue-100 border border-blue-300 rounded-lg bg-opacity-30 backdrop-blur-sm dark:bg-gray-800 md:gap-8 sm:p-6 sm:items-start lg:flex-row">
             <img
@@ -60,9 +69,11 @@ const Definition = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             />
-            <p className="self-center text-gray-800 dark:text-white">{item.description}</p>
+            <p className="self-center text-gray-800 dark:text-white">
+              {item.description}
+            </p>
           </div>
-        </div>
+        </motion.div>
       ))}
     </SubTopicContainer>
   );
