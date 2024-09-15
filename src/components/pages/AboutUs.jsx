@@ -155,8 +155,9 @@ function AboutUs() {
           viewport={{ once: true }}
           className="mb-4 text-gray-700 md:mb-6 dark:text-gray-300 sm:text-lg"
         >
-          Our website is built using cutting-edge technologies to ensure a
-          smooth, interactive, and visually appealing user experience:
+          Our website is crafted using modern development techniques and design principles, 
+          combining innovative technologies with thoughtful user experience considerations 
+          to create an engaging, responsive, and visually striking platform:
         </motion.p>
         <div className="grid grid-cols-2 gap-2 md:gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {TECHNOLOGIES.map((tech, index) => (
