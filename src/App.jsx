@@ -45,6 +45,10 @@ import ReasonsToConductResearch from "./components/pages/MarketingResearch/Reaso
 import GuideToConduct from "./components/pages/MarketingResearch/GuideToConduct";
 import NeedAndImportance from "./components/pages/MarketingResearch/NeedAndImportance";
 
+// Quiz
+import Quiz from "./components/Quiz/Quiz";
+import QuizResults from "./components/Quiz/QuizResults";
+
 function App() {
   const location = useLocation();
   const showSidebar =
@@ -76,7 +80,7 @@ function App() {
     "/marketing-research/need-and-importance",
   ];
 
-  const showNextPrevButtons = !["/", "/about"].includes(location.pathname);
+  const showNextPrevButtons = !["/", "/about"].includes(location.pathname) && !location.pathname.startsWith("/quiz");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -165,10 +169,8 @@ function App() {
                   path="/marketing-research/need-and-importance"
                   element={<NeedAndImportance />}
                 />
-                {/* <Route
-                  path="/marketing-research/market-analysis"
-                  element={<MarketAnalysis />}
-                /> */}
+                <Route path="/quiz/:questionId" element={<Quiz />} />
+                <Route path="/quiz/results" element={<QuizResults />} />
               </Routes>
               {showNextPrevButtons && <NextPrevButtons routes={routes} />}
             </div>

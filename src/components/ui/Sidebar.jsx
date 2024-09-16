@@ -63,7 +63,7 @@ function Sidebar() {
         animate={{ x: isOpen || window.innerWidth >= 640 ? 0 : "-100%" }}
         transition={{ duration: 0.3 }}
       >
-        <div className="h-full overflow-y-auto">
+        <div className="overflow-y-auto h-full">
           <nav className="flex flex-col h-full">
             {navigationConfig.map((item) => (
               <SidebarItem
@@ -81,7 +81,7 @@ function Sidebar() {
 
       {/* Sidebar Toggle Button */}
       <motion.button
-        className="fixed left-0 z-40 px-1 py-2 bg-gray-200 bottom-12 z-60 rounded-ee-md rounded-se-md dark:bg-gray-800 sm:hidden"
+        className="fixed left-0 bottom-12 z-40 px-1 py-2 bg-gray-200 z-60 rounded-ee-md rounded-se-md dark:bg-gray-800 sm:hidden"
         style={{ boxShadow: !isOpen && "2px 2px 2px 0 rgba(25, 25, 25, 0.15)" }}
         initial={{ x: 0 }}
         animate={{ x: isOpen ? 286 : 0 }}
