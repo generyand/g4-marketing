@@ -20,16 +20,16 @@ const Promotion = () => {
           transition={{ duration: 0.5 }}
         />
         <p className="self-center">
-          The product is not necessarily produced and consumed in the same
-          place. The place of production or the plant site can be different from
-          the place of distribution or selling. 
+          It fulfills the same role as it does in any other marketing context.
+          Service may be more easily replicated than a physical product. To
+          prevent a service from becoming interchangeable with its competitors,
+          it becomes vital to create a desirable brand image and name in the
+          market.
         </p>
       </div>
       <p className="p-4 bg-blue-200 rounded-lg dark:bg-blue-100 md:p-12 dark:text-gray-800">
-        It fulfills the same role as it does in any other marketing context.
-        Service may be more easily replicated than a physical product. To
-        prevent a service from becoming interchangeable with its competitors, it
-        becomes vital to create a desirable brand image and name in the market.
+        Differentiation becomes a key goal in order to attract both new and
+        repeat customers.
       </p>
     </SubTopicContainer>
   );
