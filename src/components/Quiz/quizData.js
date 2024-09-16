@@ -1,109 +1,106 @@
 const quizData = [
   {
-    text: "What is the main purpose of a marketing strategy?",
+    text: "What does the target market refer to?",
     options: [
-      "To describe the company's products",
-      "To outline steps for business growth",
-      "To attract and retain skills in today's competitive market",
-      "To improve customer service",
-    ],
-    correctAnswer: "To outline steps for business growth",
-  },
-  {
-    text: "What is a target market?",
-    options: [
-      "A set of all customers for a product",
-      "A group of customers to whom a business directs its marketing efforts",
-      "A place where a company sells its products",
-      "A competitor's customer base",
+      "A group of customers a business aims its marketing efforts at",
+      "The total market for a business's products",
+      "A market with no competitors",
+      "A market that sells high-end products",
     ],
     correctAnswer:
-      "A group of customers to whom a business directs its marketing efforts",
+      "A group of customers a business aims its marketing efforts at",
   },
   {
     text: "What are the 7Ps of marketing?",
     options: [
-      "Product, Price, Place, Promotion, Position, People, Physical Evidence",
-      "Product, Price, Process, Promotion, People, Place, Physical Evidence",
-      "Product, Price, Process, Promotion, Position, People, Policies",
-      "Product, Price, Place, Promotion, People, Position, Procedures",
+      "Product, Price, Place, Promotion, Process, People, Physical Evidence",
+      "Price, Product, People, Profit, Plan, Promotion, Process",
+      "Product, People, Profit, Price, Place, Promotion, Process",
+      "Price, Place, Promotion, People, Plan, Profit, Product",
     ],
     correctAnswer:
-      "Product, Price, Process, Promotion, People, Place, Physical Evidence",
+      "Product, Price, Place, Promotion, Process, People, Physical Evidence",
   },
   {
-    text: "Which of the following is true about services compared to products?",
+    text: "What is an example of a primary research method?",
     options: [
-      "Services are more tangible than products",
-      "Services can be produced and consumed in different locations",
-      "Services are typically intangible, diverse, and perishable",
-      "Services have fixed pricing based on material costs",
+      "Reading existing company reports",
+      "Conducting personal interviews",
+      "Using online databases",
+      "Referring to government statistics",
     ],
-    correctAnswer: "Services are typically intangible, diverse, and perishable",
+    correctAnswer: "Conducting personal interviews",
   },
   {
-    text: "What does a company overview include in a business plan?",
+    text: "Which of the following is NOT a characteristic of a good brand name?",
     options: [
-      "Sales performance and distribution strategies",
-      "Legal structure, management team, location, mission statement",
-      "Pricing strategy and customer demographics",
-      "Branding and advertising methods",
+      "Short and simple",
+      "Easy to pronounce",
+      "Difficult to spell",
+      "Suggestive of product benefits",
+    ],
+    correctAnswer: "Difficult to spell",
+  },
+  {
+    text: "What is the key focus of competitor analysis?",
+    options: [
+      "Understanding customer preferences",
+      "Identifying strengths and weaknesses of competitors",
+      "Evaluating product packaging",
+      "Developing pricing strategies",
+    ],
+    correctAnswer: "Identifying strengths and weaknesses of competitors",
+  },
+  {
+    text: "In the service industry, how is the product typically consumed?",
+    options: [
+      "Simultaneously with production",
+      "Before production",
+      "After production",
+      "At a different location",
+    ],
+    correctAnswer: "Simultaneously with production",
+  },
+  {
+    text: "Which of the following is an example of secondary research?",
+    options: [
+      "Conducting surveys",
+      "Analyzing past sales reports",
+      "Holding focus group discussions",
+      "Interviewing customers",
+    ],
+    correctAnswer: "Analyzing past sales reports",
+  },
+  {
+    text: "What does 'promotion' in marketing usually refer to?",
+    options: [
+      "Letting customers know about your product",
+      "Reducing product prices",
+      "Changing product packaging",
+      "Hiring new staff",
+    ],
+    correctAnswer: "Letting customers know about your product",
+  },
+  {
+    text: "What does a service mark refer to?",
+    options: [
+      "A word, symbol, or design legally registered for service identification",
+      "A product's pricing strategy",
+      "A brand's slogan",
+      "A company's marketing budget",
     ],
     correctAnswer:
-      "Legal structure, management team, location, mission statement",
+      "A word, symbol, or design legally registered for service identification",
   },
   {
-    text: "In branding, what is a trademark?",
+    text: "What does 'place' refer to in the 7Ps of marketing?",
     options: [
-      "A slogan that represents a product's unique benefits",
-      "A logo that is easy to recognize and remember",
-      "A legally registered word, symbol, or design for product identification",
-      "A service mark that relates to intangible assets",
+      "Where a company stores its products",
+      "Where a product or service is produced and consumed",
+      "The company's geographical location",
+      "The price of the product",
     ],
-    correctAnswer:
-      "A legally registered word, symbol, or design for product identification",
-  },
-  {
-    text: "What is the key difference between primary and secondary market research?",
-    options: [
-      "Primary research is faster and less expensive",
-      "Secondary research collects data directly from respondents",
-      "Primary research gathers new data, while secondary research uses existing data",
-      "Secondary research requires surveys and interviews",
-    ],
-    correctAnswer:
-      "Primary research gathers new data, while secondary research uses existing data",
-  },
-  {
-    text: "Which of the following is NOT a reason to conduct market research?",
-    options: [
-      "To identify new business opportunities",
-      "To test customer loyalty to existing products",
-      "To increase brand awareness",
-      "To determine export potentials",
-    ],
-    correctAnswer: "To increase brand awareness",
-  },
-  {
-    text: "What is a focus group discussion in market research?",
-    options: [
-      "A series of one-on-one interviews with customers",
-      "A survey sent via email to collect data",
-      "A moderated group interview to gather information on customer needs and behaviors",
-      "An analysis of competitors' strengths and weaknesses",
-    ],
-    correctAnswer:
-      "A moderated group interview to gather information on customer needs and behaviors",
-  },
-  {
-    text: "Which aspect of marketing research helps in determining consumer needs and wants?",
-    options: [
-      "Sales forecasting",
-      "Market segmentation",
-      "Competitor analysis",
-      "Structured distribution research",
-    ],
-    correctAnswer: "Market segmentation",
+    correctAnswer: "Where a product or service is produced and consumed",
   },
 ];
 

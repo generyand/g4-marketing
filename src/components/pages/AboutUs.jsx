@@ -14,7 +14,7 @@ const TEAM_MEMBERS = [
       "Gene Ryan led the team and developed the website, ensuring the technical aspects of the presentation were seamless and interactive.",
   },
   {
-    name: "Fernyl Jean Maningo",
+    name: "Fernyl Jean Maningo",  
     role: "Designer",
     contribution:
       "Fernyl crafted the visual design of the website, focusing on user experience and aesthetic appeal to make the content engaging.",
