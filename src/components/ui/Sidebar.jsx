@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import SidebarItem from "./SidebarItem";
 import { navigationConfig } from "../../data/navigationConfig";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +64,7 @@ function Sidebar() {
         animate={{ x: isOpen || window.innerWidth >= 640 ? 0 : "-100%" }}
         transition={{ duration: 0.3 }}
       >
-        <div className="overflow-y-auto h-full">
+        <div className="relative h-full overflow-y-auto">
           <nav className="flex flex-col h-full">
             {navigationConfig.map((item) => (
               <SidebarItem
@@ -75,13 +76,18 @@ function Sidebar() {
                 closeSidebar={closeSidebar}
               />
             ))}
+            <button
+            onClick={closeSidebar}
+            className="absolute bottom-0 flex items-center w-full gap-2 px-4 py-2 mx-auto text-transparent transition-colors duration-300 hover:text-white hover:bg-blue-500">
+              <Link to="/quiz/0" className="w-full">Hidden Activity</Link>
+            </button>
           </nav>
         </div>
       </motion.div>
 
       {/* Sidebar Toggle Button */}
       <motion.button
-        className="fixed left-0 bottom-12 z-40 px-1 py-2 bg-gray-200 z-60 rounded-ee-md rounded-se-md dark:bg-gray-800 sm:hidden"
+        className="fixed left-0 z-40 px-1 py-2 bg-gray-200 bottom-12 z-60 rounded-ee-md rounded-se-md dark:bg-gray-800 sm:hidden"
         style={{ boxShadow: !isOpen && "2px 2px 2px 0 rgba(25, 25, 25, 0.15)" }}
         initial={{ x: 0 }}
         animate={{ x: isOpen ? 286 : 0 }}
