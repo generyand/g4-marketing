@@ -54,22 +54,22 @@ function QuestionAnalysisModal({ isOpen, onClose, quizData, answers }) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative mx-auto w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
+            className="relative w-full max-w-lg mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
           >
             <div
               ref={modalRef}
               className="flex relative flex-col w-full max-h-[75svh] md:max-h-[80svh] md:mt-12 bg-white rounded-lg border-0 shadow-lg outline-none focus:outline-none dark:bg-gray-800"
             >
-              <div className="flex justify-between items-center p-5 rounded-t border-b border-solid border-blueGray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between p-5 border-b border-solid rounded-t border-blueGray-200 dark:border-gray-700">
                 <h3 id="modal-title" className="text-xl font-semibold sm:text-2xl dark:text-white">
                   Question Analysis
                 </h3>
                 <button
-                  className="flex justify-center items-center self-center p-1 ml-auto text-3xl font-semibold leading-none text-gray-900 bg-transparent border-0 outline-none dark:text-white focus:outline-none"
+                  className="flex items-center self-center justify-center p-1 ml-auto text-3xl font-semibold leading-none text-gray-900 bg-transparent border-0 outline-none dark:text-white focus:outline-none"
                   onClick={onClose}
                   aria-label="Close modal"
                 >
-                  <span className="flex justify-center items-center w-6 h-6 text-2xl bg-transparent outline-none focus:outline-none">
+                  <span className="flex items-center justify-center w-6 h-6 text-2xl bg-transparent outline-none focus:outline-none">
                     ×
                   </span>
                 </button>
@@ -92,7 +92,7 @@ function QuestionAnalysisModal({ isOpen, onClose, quizData, answers }) {
                         <span
                           className={
                             answers[index] === question.correctAnswer
-                              ? "text-green-500 ml-1 font-semibold"
+                              ? "text-emerald-500 ml-1 font-semibold"
                               : "text-red-500 ml-1 font-semibold"
                           }
                         >
@@ -108,9 +108,9 @@ function QuestionAnalysisModal({ isOpen, onClose, quizData, answers }) {
                   ))}
                 </div>
               </div>
-              <div className="flex justify-end items-center p-2 bg-transparent rounded-b border-t border-solid sm:p-4 border-blueGray-200 dark:border-gray-700">
+              <div className="flex items-center justify-end p-2 bg-transparent border-t border-solid rounded-b sm:p-4 border-blueGray-200 dark:border-gray-700">
                 <button
-                  className="px-4 py-2 mr-1 mb-1 text-sm font-bold text-white uppercase bg-blue-500 rounded shadow transition-all duration-150 ease-linear outline-none sm:px-6 hover:shadow-lg focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700"
+                  className="px-4 py-2 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-blue-500 rounded shadow outline-none sm:px-6 hover:shadow-lg focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700"
                   type="button"
                   onClick={onClose}
                 >
