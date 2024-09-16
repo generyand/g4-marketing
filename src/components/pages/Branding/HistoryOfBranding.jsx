@@ -14,8 +14,7 @@ const HistoryOfBranding = () => {
         The term “<Highlight>brand</Highlight>” first emerged more than half a
         century ago as a way for cattle ranchers to identify their animals. In
         the late 1880s, packaged goods like Coca-Cola started taking off. Brands
-        were used to differentiate them from the generic competition. 
-        differentiate them from the generic competition. 
+        were used to differentiate them from the generic competition.
       </p>
       <p className="mb-4 md:mb-8">
         But as branding progressed, marketers realized there was more to the
