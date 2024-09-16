@@ -25,9 +25,9 @@ function QuizQuestion({ question, onSubmit, showFeedback, userAnswer }) {
             className={`w-full p-3 text-left rounded-md transition-colors ${
               showFeedback
                 ? option === question.correctAnswer
-                  ? "bg-green-500 text-white"
+                  ? "bg-emerald-400 text-white dark:bg-emerald-500"
                   : option === userAnswer
-                  ? "bg-red-500 text-white"
+                  ? "bg-red-400 dark:bg-red-500 text-white"
                   : "bg-gray-200 dark:bg-gray-700"
                 : selectedAnswer === option
                 ? "outline outline-2 outline-blue-500"
@@ -42,7 +42,7 @@ function QuizQuestion({ question, onSubmit, showFeedback, userAnswer }) {
         <button
           onClick={handleSubmit}
           disabled={!selectedAnswer}
-          className="px-4 py-2 mt-4 w-full font-normal text-white bg-blue-500 rounded font hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full px-4 py-2 mt-4 font-normal text-white bg-blue-500 rounded font hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Submit
         </button>

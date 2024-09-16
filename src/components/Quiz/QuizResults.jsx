@@ -23,7 +23,7 @@ function QuizResults() {
   const percentage = (score / totalQuestions) * 100;
 
   const getColor = () => {
-    if (percentage >= 80) return "text-green-500";
+    if (percentage >= 80) return "text-emerald-400 dark:text-emerald-500";
     if (percentage >= 60) return "text-yellow-500";
     return "text-red-500";
   };
@@ -39,7 +39,7 @@ function QuizResults() {
   }, [percentage]);
 
   return (
-    <div className="container px-4 py-8 mx-auto max-w-2xl">
+    <div className="container max-w-2xl px-4 py-8 mx-auto text-emerald">
       <h2 className="mb-8 text-3xl font-bold text-center">Quiz Results</h2>
 
       <div className="flex justify-center mb-8">
@@ -68,7 +68,7 @@ function QuizResults() {
               }}
             ></circle>
           </svg>
-          <div className="flex absolute top-0 left-0 justify-center items-center w-full h-full">
+          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <span className={`text-3xl font-bold ${getColor()}`}>
               {Math.round((animatedPercentage / 100) * totalQuestions)}/
               {totalQuestions}
@@ -82,16 +82,16 @@ function QuizResults() {
         out of {totalQuestions} ({percentage.toFixed(1)}%)
       </p>
 
-      <div className="flex flex-col gap-2 justify-center w-full">
+      <div className="flex flex-col justify-center w-full gap-2">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-6 py-3 mx-auto font-bold text-center text-white bg-blue-500 rounded-full transition-colors hover:bg-blue-600"
+          className="px-6 py-3 mx-auto font-bold text-center text-white transition-colors bg-blue-500 rounded-full hover:bg-blue-600"
         >
           Question Analysis
         </button>
         <Link
           to="/quiz/0"
-          className="px-6 py-3 mx-auto font-bold text-center text-white bg-green-500 rounded-full transition-colors hover:bg-green-600"
+          className="px-6 py-3 mx-auto font-bold text-center text-white transition-colors rounded-full bg-emerald-400 dark:bg-emerald-500 hover:bg-emerald-500 dark:hover:bg-emerald-600"
         >
           Retake Quiz
         </Link>
