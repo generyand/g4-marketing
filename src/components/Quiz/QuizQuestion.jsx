@@ -14,7 +14,7 @@ function QuizQuestion({ question, onSubmit, showFeedback, userAnswer }) {
   };
 
   return (
-    <div className="p-6 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div className="p-4 mx-auto bg-white rounded-lg shadow-md md:p-6 dark:bg-gray-800">
       <h2 className="mb-4 font-semibold md:text-2xl">{question.text}</h2>
       <div className="space-y-2">
         {question.options.map((option, index) => (
