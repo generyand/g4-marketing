@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useLocation, Link } from "react-router-dom";
 import quizData from "./quizData";
 import QuestionAnalysisModal from "./QuestionAnalysisModal";
+import { useReward } from "react-rewards";
 
 function QuizResults() {
   const location = useLocation();
   const answers = location.state?.answers || {};
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { reward, isAnimating } = useReward("confettiReward", "confetti");
 
   const calculateScore = () => {
     let score = 0;
@@ -33,13 +35,16 @@ function QuizResults() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimatedPercentage(percentage);
+      if (score >= 8) {
+        reward();
+      }
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [percentage]);
+  }, [percentage, score, reward]);
 
   return (
-    <div className="container max-w-2xl px-4 py-8 mx-auto text-emerald">
+    <div className="container px-4 py-8 mx-auto max-w-2xl text-emerald">
       <h2 className="mb-8 text-3xl font-bold text-center">Quiz Results</h2>
 
       <div className="flex justify-center mb-8">
@@ -68,12 +73,18 @@ function QuizResults() {
               }}
             ></circle>
           </svg>
-          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
+          <div className="flex absolute top-0 left-0 justify-center items-center w-full h-full">
             <span className={`text-3xl font-bold ${getColor()}`}>
               {Math.round((animatedPercentage / 100) * totalQuestions)}/
               {totalQuestions}
             </span>
           </div>
+        </div>
+        <div className="fixed inset-0 pointer-events-none md:ml-48" aria-hidden="true">
+          <span
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            id="confettiReward"
+          />
         </div>
       </div>
 
@@ -82,16 +93,16 @@ function QuizResults() {
         out of {totalQuestions} ({percentage.toFixed(1)}%)
       </p>
 
-      <div className="flex flex-col justify-center w-full gap-2">
+      <div className="flex flex-col gap-2 justify-center w-full">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-6 py-3 mx-auto font-bold text-center text-white transition-colors bg-blue-500 rounded-full hover:bg-blue-600"
+          className="px-6 py-3 mx-auto font-bold text-center text-white bg-blue-500 rounded-full transition-colors hover:bg-blue-600"
         >
           Question Analysis
         </button>
         <Link
           to="/quiz/0"
-          className="px-6 py-3 mx-auto font-bold text-center text-white transition-colors rounded-full bg-emerald-400 dark:bg-emerald-500 hover:bg-emerald-500 dark:hover:bg-emerald-600"
+          className="px-6 py-3 mx-auto font-bold text-center text-white bg-emerald-400 rounded-full transition-colors dark:bg-emerald-500 hover:bg-emerald-500 dark:hover:bg-emerald-600"
         >
           Retake Quiz
         </Link>
