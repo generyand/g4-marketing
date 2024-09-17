@@ -57,7 +57,7 @@ const Process = () => {
         activity require special mention and attention. A process needs to be
         clearly defined for the service delivery to every customer, at any time
         of day, on any day. Within this process, there should be defined areas
-        where a customer preference can be accommodated to{" "}
+        where a customer preference can be accommodated to.
       </p>
     </SubTopicContainer>
   );
