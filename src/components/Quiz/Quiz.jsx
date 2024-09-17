@@ -59,12 +59,12 @@ function Quiz() {
       />
       {showFeedback && (
         <div className="mt-6 text-center">
-          <p className="mb-4 text-lg">
+          {/* <p className="mb-4 text-lg">
             {currentQuestion.correctAnswer === answers[currentQuestionIndex]
               ? "Correct!"
               : "Incorrect. The correct answer is: " +
                 currentQuestion.correctAnswer}
-          </p>
+          </p> */}
           <button
             onClick={handleNext}
             className="px-4 py-2 font-normal text-white bg-blue-500 rounded hover:bg-blue-600"
