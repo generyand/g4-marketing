@@ -44,6 +44,7 @@ import MarketingResearch from "./components/pages/MarketingResearch";
 import ReasonsToConductResearch from "./components/pages/MarketingResearch/ReasonsToConductResearch";
 import GuideToConduct from "./components/pages/MarketingResearch/GuideToConduct";
 import NeedAndImportance from "./components/pages/MarketingResearch/NeedAndImportance";
+import Conclusion from "./components/pages/Conclusion"; // Add this import
 
 // Quiz
 import Quiz from "./components/Quiz/Quiz";
@@ -78,6 +79,7 @@ function App() {
     "/marketing-research/reasons-to-conduct",
     "/marketing-research/guide-to-conduct",
     "/marketing-research/need-and-importance",
+    "/conclusion", // Add this route
   ];
 
   const showNextPrevButtons = !["/", "/about"].includes(location.pathname) && !location.pathname.startsWith("/quiz");
@@ -169,6 +171,7 @@ function App() {
                   path="/marketing-research/need-and-importance"
                   element={<NeedAndImportance />}
                 />
+                <Route path="/conclusion" element={<Conclusion />} /> {/* Add this route */}
                 <Route path="/quiz/:questionId" element={<Quiz />} />
                 <Route path="/quiz/results" element={<QuizResults />} />
               </Routes>
