@@ -1,14 +1,26 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useLocation, Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import quizData from "./quizData";
 import QuestionAnalysisModal from "./QuestionAnalysisModal";
 import { useReward } from "react-rewards";
 
 function QuizResults() {
   const location = useLocation();
-  const answers = location.state?.answers || {};
+  const navigate = useNavigate();
+  const [answers, setAnswers] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { reward, isAnimating } = useReward("confettiReward", "confetti");
+
+  useEffect(() => {
+    const storedAnswers = JSON.parse(localStorage.getItem("quizAnswers"));
+    const quizCompleted = localStorage.getItem("quizCompleted");
+
+    if (quizCompleted !== "true" || !storedAnswers) {
+      navigate("/quiz/0");
+    } else {
+      setAnswers(storedAnswers);
+    }
+  }, [navigate]);
 
   const calculateScore = () => {
     let score = 0;
@@ -42,6 +54,12 @@ function QuizResults() {
 
     return () => clearTimeout(timer);
   }, [percentage, score, reward]);
+
+  const handleRetakeQuiz = () => {
+    localStorage.removeItem("quizAnswers");
+    localStorage.removeItem("quizCompleted");
+    navigate("/quiz/0");
+  };
 
   return (
     <div className="container px-4 py-8 mx-auto max-w-2xl text-emerald">
@@ -80,7 +98,10 @@ function QuizResults() {
             </span>
           </div>
         </div>
-        <div className="fixed inset-0 pointer-events-none md:ml-48" aria-hidden="true">
+        <div
+          className="fixed inset-0 pointer-events-none md:ml-48"
+          aria-hidden="true"
+        >
           <span
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             id="confettiReward"
@@ -100,12 +121,12 @@ function QuizResults() {
         >
           Question Analysis
         </button>
-        <Link
-          to="/quiz/0"
+        <button
+          onClick={handleRetakeQuiz}
           className="px-6 py-3 mx-auto font-bold text-center text-white bg-emerald-400 rounded-full transition-colors dark:bg-emerald-500 hover:bg-emerald-500 dark:hover:bg-emerald-600"
         >
           Retake Quiz
-        </Link>
+        </button>
       </div>
 
       <QuestionAnalysisModal
