@@ -1,7 +1,6 @@
 import React from "react";
 import Highlight from "../ui/Highlight";
 import MainTopicContainer from "../ui/MainTopicContainer";
-import SubTopicContainer from "../ui/SubTopicContainer";
 import SubTopicTitle from "../ui/SubTopicTitle";
 
 const Conclusion = () => {
