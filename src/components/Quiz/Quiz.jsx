@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import QuizQuestion from "./QuizQuestion";
 import quizData from "./quizData";
@@ -12,9 +12,23 @@ function Quiz() {
   const currentQuestionIndex = parseInt(questionId, 10);
   const currentQuestion = quizData[currentQuestionIndex];
 
+  useEffect(() => {
+    const storedAnswers = JSON.parse(localStorage.getItem("quizAnswers"));
+    const quizCompleted = localStorage.getItem("quizCompleted");
+
+    if (quizCompleted === "true") {
+      navigate("/quiz/results");
+    } else if (storedAnswers) {
+      setAnswers(storedAnswers);
+      navigate(`/quiz/${Object.keys(storedAnswers).length}`);
+    }
+  }, [navigate]);
+
   const handleSubmit = (answer) => {
-    setAnswers({ ...answers, [currentQuestionIndex]: answer });
+    const newAnswers = { ...answers, [currentQuestionIndex]: answer };
+    setAnswers(newAnswers);
     setShowFeedback(true);
+    localStorage.setItem("quizAnswers", JSON.stringify(newAnswers));
   };
 
   const handleNext = () => {
@@ -22,12 +36,13 @@ function Quiz() {
     if (currentQuestionIndex < quizData.length - 1) {
       navigate(`/quiz/${currentQuestionIndex + 1}`);
     } else {
+      localStorage.setItem("quizCompleted", "true");
       navigate("/quiz/results", { state: { answers } });
     }
   };
 
   return (
-    <div className="container max-w-2xl px-4 py-8 mx-auto">
+    <div className="container px-4 py-8 mx-auto max-w-2xl">
       <h1 className="mb-4 text-2xl font-bold text-center md:text-3xl">
         Short Activity
       </h1>
