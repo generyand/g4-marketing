@@ -6,17 +6,23 @@ function QuestionAnalysisModal({ isOpen, onClose, quizData, answers }) {
   const [isBrowser, setIsBrowser] = useState(false);
   const modalRef = useRef(null);
 
-  const handleKeyDown = useCallback((event) => {
-    if (event.key === "Escape") {
-      onClose();
-    }
-  }, [onClose]);
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    },
+    [onClose]
+  );
 
-  const handleOutsideClick = useCallback((event) => {
-    if (modalRef.current && !modalRef.current.contains(event.target)) {
-      onClose();
-    }
-  }, [onClose]);
+  const handleOutsideClick = useCallback(
+    (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        onClose();
+      }
+    },
+    [onClose]
+  );
 
   useEffect(() => {
     setIsBrowser(true);
@@ -61,7 +67,10 @@ function QuestionAnalysisModal({ isOpen, onClose, quizData, answers }) {
               className="flex relative flex-col w-full max-h-[75svh] md:max-h-[80svh] md:mt-12 bg-white rounded-lg border-0 shadow-lg outline-none focus:outline-none dark:bg-gray-800"
             >
               <div className="flex items-center justify-between p-5 border-b border-solid rounded-t border-blueGray-200 dark:border-gray-700">
-                <h3 id="modal-title" className="text-xl font-semibold sm:text-2xl dark:text-white">
+                <h3
+                  id="modal-title"
+                  className="text-xl font-semibold sm:text-2xl dark:text-white"
+                >
                   Question Analysis
                 </h3>
                 <button
@@ -101,7 +110,10 @@ function QuestionAnalysisModal({ isOpen, onClose, quizData, answers }) {
                       </p>
                       {answers[index] !== question.correctAnswer && (
                         <p className="text-sm font-semibold sm:text-base dark:text-gray-300">
-                          Correct answer: <span className="font-light">{question.correctAnswer}</span>
+                          Correct answer:{" "}
+                          <span className="font-light">
+                            {question.correctAnswer}
+                          </span>
                         </p>
                       )}
                     </motion.div>
