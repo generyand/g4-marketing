@@ -126,7 +126,7 @@ function QuizResults() {
           onClick={() => setIsModalOpen(true)}
           className="px-6 py-3 mx-auto font-bold text-center text-white transition-colors bg-blue-500 rounded-full hover:bg-blue-600"
         >
-          Question Analysis
+          Results Summary
         </button>
         <button
           onClick={handleRetakeQuiz}
