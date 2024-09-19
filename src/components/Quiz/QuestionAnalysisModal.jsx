@@ -71,7 +71,7 @@ function QuestionAnalysisModal({ isOpen, onClose, quizData, answers }) {
                   id="modal-title"
                   className="text-xl font-semibold sm:text-2xl dark:text-white"
                 >
-                  Question Analysis
+                  Results Summary
                 </h3>
                 <button
                   className="flex items-center self-center justify-center p-1 ml-auto text-3xl font-semibold leading-none text-gray-900 bg-transparent border-0 outline-none dark:text-white focus:outline-none"
