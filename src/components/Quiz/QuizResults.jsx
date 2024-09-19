@@ -47,13 +47,13 @@ function QuizResults() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimatedPercentage(percentage);
-      if (score >= 8) {
+      if (percentage >= 80) {
         reward();
       }
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [percentage, score, reward]);
+  }, [percentage, reward]);
 
   const handleRetakeQuiz = () => {
     localStorage.removeItem("quizAnswers");
@@ -61,8 +61,14 @@ function QuizResults() {
     navigate("/quiz/0");
   };
 
+  const getEncouragement = () => {
+    if (percentage >= 80) return "Excellent work, Ga! 🥳";
+    if (percentage >= 60) return "Great job! Keep it up.";
+    return "Don't give up! With more practice, you'll improve in no time.";
+  };
+
   return (
-    <div className="container px-4 py-8 mx-auto max-w-2xl text-emerald">
+    <div className="container max-w-2xl px-4 py-8 mx-auto text-emerald md:mt-16">
       <h2 className="mb-8 text-3xl font-bold text-center">Quiz Results</h2>
 
       <div className="flex justify-center mb-8">
@@ -91,7 +97,7 @@ function QuizResults() {
               }}
             ></circle>
           </svg>
-          <div className="flex absolute top-0 left-0 justify-center items-center w-full h-full">
+          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
             <span className={`text-3xl font-bold ${getColor()}`}>
               {Math.round((animatedPercentage / 100) * totalQuestions)}/
               {totalQuestions}
@@ -103,27 +109,28 @@ function QuizResults() {
           aria-hidden="true"
         >
           <span
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             id="confettiReward"
           />
         </div>
       </div>
 
-      <p className="mb-8 text-xl text-center">
+      <p className="text-xl text-center">
         You scored <span className={`font-bold ${getColor()}`}>{score}</span>{" "}
         out of {totalQuestions} ({percentage.toFixed(1)}%)
       </p>
+      <p className="mb-8 text-xl text-center">{getEncouragement()}</p>
 
-      <div className="flex flex-col gap-2 justify-center w-full">
+      <div className="flex flex-col justify-center w-full gap-2">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-6 py-3 mx-auto font-bold text-center text-white bg-blue-500 rounded-full transition-colors hover:bg-blue-600"
+          className="px-6 py-3 mx-auto font-bold text-center text-white transition-colors bg-blue-500 rounded-full hover:bg-blue-600"
         >
           Question Analysis
         </button>
         <button
           onClick={handleRetakeQuiz}
-          className="px-6 py-3 mx-auto font-bold text-center text-white bg-emerald-400 rounded-full transition-colors dark:bg-emerald-500 hover:bg-emerald-500 dark:hover:bg-emerald-600"
+          className="px-6 py-3 mx-auto font-bold text-center text-white transition-colors rounded-full bg-emerald-400 dark:bg-emerald-500 hover:bg-emerald-500 dark:hover:bg-emerald-600"
         >
           Retake Quiz
         </button>

@@ -13,9 +13,9 @@ const quizData = [
   {
     text: "What are the 7Ps of marketing?",
     options: [
-      "Product, Price, Place, Promotion, Process, People, Physical Evidence",
       "Price, Product, People, Profit, Plan, Promotion, Process",
       "Product, People, Profit, Price, Place, Promotion, Process",
+      "Product, Price, Place, Promotion, Process, People, Physical Evidence",
       "Price, Place, Promotion, People, Plan, Profit, Product",
     ],
     correctAnswer:
@@ -54,10 +54,10 @@ const quizData = [
   {
     text: "In the service industry, how is the product typically consumed?",
     options: [
-      "Simultaneously with production",
       "Before production",
       "After production",
       "At a different location",
+      "Simultaneously with production",
     ],
     correctAnswer: "Simultaneously with production",
   },
@@ -126,9 +126,9 @@ const quizData = [
     text: "Which of the following is an example of a marketing goal?",
     options: [
       "Launching a new product",
-      "Increasing brand awareness",
       "Hiring more employees",
       "Changing the company logo",
+      "Increasing brand awareness",
     ],
     correctAnswer: "Increasing brand awareness",
   },
@@ -143,8 +143,6 @@ const quizData = [
     correctAnswer:
       "The unique value a product or service provides to customers",
   },
-
-  // Change
   {
     text: "What should a business define in order to understand its customers?",
     options: [
@@ -155,8 +153,6 @@ const quizData = [
     ],
     correctAnswer: "Its target audience",
   },
-
-  // Change
   {
     text: "What is included in the marketing mix?",
     options: [
@@ -181,8 +177,8 @@ const quizData = [
     text: "What does the term 'physical evidence' refer to in the 7Ps?",
     options: [
       "The actual physical product sold",
-      "Tangible elements that support a brand's image",
       "The company's physical location",
+      "Tangible elements that support a brand's image",
       "Evidence of market research",
     ],
     correctAnswer: "Tangible elements that support a brand's image",
@@ -197,18 +193,16 @@ const quizData = [
     ],
     correctAnswer: "To measure the success of marketing efforts",
   },
-
-  // Change
   {
     text: "Which of the following is a common method to track marketing success?",
     options: [
-      "Customer feedback surveys",
       "Employee feedback",
       "Product pricing changes",
       "Production speed",
+      "Customer feedback surveys",
     ],
     correctAnswer: "Customer feedback surveys",
-},
+  },
 ];
 
 export default quizData;
