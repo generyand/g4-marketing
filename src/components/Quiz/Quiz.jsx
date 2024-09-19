@@ -42,9 +42,9 @@ function Quiz() {
   };
 
   return (
-    <div className="container px-4 py-8 mx-auto max-w-2xl">
+    <div className="container max-w-2xl px-2 py-8 mx-auto md:px-4">
       <h1 className="mb-4 text-2xl font-bold text-center md:text-3xl">
-        Short Activity
+        Quiz
       </h1>
       <div className="mb-1 text-base text-end">
         <p>
