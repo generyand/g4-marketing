@@ -117,7 +117,7 @@ function QuizResults() {
 
       <p className="text-xl text-center">
         You scored <span className={`font-bold ${getColor()}`}>{score}</span>{" "}
-        out of {totalQuestions} ({percentage.toFixed(1)}%)
+        out of {totalQuestions} ({percentage % 1 === 0 ? Math.round(percentage) : percentage.toFixed(1)}%)
       </p>
       <p className="mb-8 text-xl text-center">{getEncouragement()}</p>
 
